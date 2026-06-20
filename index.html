@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>泌尿科核心課程考試｜離線複習系統</title>
+<title>泌尿科筆記 ｜ Urology Notes</title>
 <style>
 :root{
   --bg:#f7f8fa; --paper:#ffffff; --ink:#1f2733; --muted:#5b6675;
   --line:#e3e7ee; --accent:#2f5d8a; --accent-soft:#eaf1f8;
   --flow-bg:#f1f3f6; --warn:#9a3b2f; --warn-soft:#fbeeec;
   --hi:#fff2a8; --shadow:0 1px 3px rgba(20,30,50,.07);
+  --appbar-h:50px;
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
@@ -22,7 +23,7 @@ a{color:var(--accent);text-decoration:none}
 
 /* ---------- Header ---------- */
 header.top{
-  position:sticky;top:0;z-index:40;background:var(--paper);
+  position:sticky;top:var(--appbar-h);z-index:40;background:var(--paper);
   border-bottom:1px solid var(--line);box-shadow:var(--shadow);
 }
 .top-inner{display:flex;align-items:center;gap:12px;padding:10px 16px;max-width:1400px;margin:0 auto}
@@ -50,8 +51,8 @@ header.top{
 /* ---------- Layout ---------- */
 .wrap{display:flex;max-width:1400px;margin:0 auto;align-items:flex-start}
 nav.side{
-  width:288px;flex:0 0 288px;position:sticky;top:57px;align-self:flex-start;
-  height:calc(100vh - 57px);overflow-y:auto;background:var(--paper);
+  width:288px;flex:0 0 288px;position:sticky;top:calc(var(--appbar-h) + 57px);align-self:flex-start;
+  height:calc(100vh - var(--appbar-h) - 57px);overflow-y:auto;background:var(--paper);
   border-right:1px solid var(--line);padding:14px 10px 60px
 }
 .mod{margin-bottom:4px}
@@ -173,11 +174,11 @@ mark{background:var(--hi);padding:0 1px;border-radius:3px}
 @media(max-width:860px){
   #menuBtn{display:inline-block}
   nav.side{
-    position:fixed;left:0;top:57px;z-index:50;transform:translateX(-100%);
+    position:fixed;left:0;top:calc(var(--appbar-h) + 57px);z-index:50;transform:translateX(-100%);
     transition:transform .2s;box-shadow:0 8px 30px rgba(0,0,0,.18);width:84%;max-width:330px
   }
   nav.side.open{transform:translateX(0)}
-  .backdrop.show{display:block;position:fixed;inset:57px 0 0;background:rgba(15,22,35,.4);z-index:45}
+  .backdrop.show{display:block;position:fixed;inset:calc(var(--appbar-h) + 57px) 0 0 0;background:rgba(15,22,35,.4);z-index:45}
   main{padding:16px 14px 120px}
   .brand small{display:none}
   .search-wrap{max-width:none}
@@ -187,9 +188,91 @@ mark{background:var(--hi);padding:0 1px;border-radius:3px}
   .top-inner{flex-wrap:wrap;gap:8px}
   .search-wrap{order:3;flex-basis:100%}
 }
+
+/* ---------- App bar (頂層分頁) ---------- */
+header.appbar{position:sticky;top:0;z-index:60;height:var(--appbar-h);
+  background:linear-gradient(180deg,#27425e,#2f5d8a);color:#fff;
+  border-bottom:1px solid rgba(255,255,255,.12);box-shadow:0 1px 8px rgba(20,30,50,.16)}
+.appbar-inner{display:flex;align-items:center;gap:20px;height:100%;max-width:1400px;margin:0 auto;padding:0 16px}
+.app-brand{font-weight:700;font-size:16px;letter-spacing:.5px;white-space:nowrap;display:flex;align-items:baseline;gap:8px}
+.app-brand small{font-weight:400;font-size:11px;opacity:.78;letter-spacing:.6px}
+.pagetabs{display:flex;gap:4px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.pagetabs::-webkit-scrollbar{display:none}
+.ptab{appearance:none;border:0;background:transparent;color:rgba(255,255,255,.84);
+  font-size:13.5px;font-weight:600;padding:7px 14px;border-radius:8px;cursor:pointer;white-space:nowrap;
+  transition:background .15s,color .15s}
+.ptab:hover{background:rgba(255,255,255,.14);color:#fff}
+.ptab.active{background:#fff;color:var(--accent)}
+.ptab.disabled{opacity:.45;cursor:default}
+.ptab.disabled:hover{background:transparent;color:rgba(255,255,255,.45)}
+
+/* ---------- 分頁容器 ---------- */
+.page{display:none}
+.page.active{display:block}
+
+/* ---------- 封面 ---------- */
+.cover{max-width:980px;margin:0 auto;padding:50px 24px 80px}
+.cover-hero{text-align:center;padding:36px 16px 30px;border-bottom:1px solid var(--line)}
+.cover-kicker{font-size:12.5px;letter-spacing:3px;color:var(--accent);font-weight:700;text-transform:uppercase;margin-bottom:14px}
+.cover-title{font-size:46px;font-weight:800;letter-spacing:4px;margin:0 0 8px;color:var(--ink)}
+.cover-sub{font-size:14px;color:var(--muted);letter-spacing:6px;margin-bottom:30px}
+.cover-author{font-size:19px;font-weight:700;color:var(--ink);margin-bottom:8px}
+.cover-aff{font-size:13.5px;color:var(--muted);max-width:580px;margin:0 auto;line-height:1.65}
+.cover-sec-title{font-size:12.5px;font-weight:700;color:var(--muted);letter-spacing:2px;margin:46px 0 18px;text-align:center}
+.cover-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.cover-card{display:block;text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:14px;
+  padding:22px 20px;cursor:pointer;transition:border-color .15s,box-shadow .15s,transform .1s;box-shadow:var(--shadow)}
+.cover-card:hover{border-color:var(--accent);box-shadow:0 7px 22px rgba(20,30,50,.1);transform:translateY(-2px)}
+.cover-card .cc-ico{font-size:26px;margin-bottom:10px}
+.cover-card .cc-name{font-size:17px;font-weight:700;color:var(--ink);margin-bottom:6px}
+.cover-card .cc-desc{font-size:13px;color:var(--muted);line-height:1.55}
+.cover-card.soon{cursor:default;opacity:.72;border-style:dashed}
+.cover-card.soon:hover{border-color:var(--line);box-shadow:var(--shadow);transform:none}
+.cover-foot{text-align:center;color:var(--muted);font-size:12px;margin-top:42px}
+@media(max-width:520px){.cover-title{font-size:34px;letter-spacing:2px}.cover{padding:30px 16px 60px}}
+
 </style>
 </head>
 <body>
+<header class="appbar">
+  <div class="appbar-inner">
+    <div class="app-brand">泌尿科筆記 <small>Urology Notes</small></div>
+    <nav class="pagetabs" id="pagetabs">
+      <button class="ptab active" data-page="cover">封面</button>
+      <button class="ptab" data-page="core">泌尿科核心課程</button>
+    </nav>
+  </div>
+</header>
+
+<!-- ===================== 封面 ===================== -->
+<section class="page active" id="page-cover">
+  <div class="cover">
+    <div class="cover-hero">
+      <div class="cover-kicker">Exam-oriented Notes</div>
+      <h1 class="cover-title">泌尿科筆記</h1>
+      <div class="cover-sub">U&nbsp;R&nbsp;O&nbsp;L&nbsp;O&nbsp;G&nbsp;Y&nbsp;&nbsp;N&nbsp;O&nbsp;T&nbsp;E&nbsp;S</div>
+      <div class="cover-author">Chang Yu Yuan</div>
+      <div class="cover-aff">Division of Urology, Department of Surgery,<br>Tri-Service General Hospital, National Defense Medical University, Taipei, Taiwan</div>
+    </div>
+    <div class="cover-sec-title">— 內容分頁 —</div>
+    <div class="cover-grid">
+      <div class="cover-card" data-goto="core">
+        <div class="cc-ico">📚</div>
+        <div class="cc-name">泌尿科核心課程</div>
+        <div class="cc-desc">住院醫師核心訓練九大科別考試導向筆記，含 A–H 結構、最後衝刺模式與全文搜尋。</div>
+      </div>
+      <div class="cover-card soon">
+        <div class="cc-ico">➕</div>
+        <div class="cc-name">更多主題</div>
+        <div class="cc-desc">將陸續新增其他泌尿科相關筆記分頁⋯⋯</div>
+      </div>
+    </div>
+    <div class="cover-foot">© Chang Yu Yuan · 離線使用 · 僅供個人考試複習</div>
+  </div>
+</section>
+
+<!-- ================== 泌尿科核心課程 ================== -->
+<section class="page" id="page-core">
 <header class="top">
   <div class="top-inner">
     <button class="btn ghost" id="menuBtn" aria-label="目錄">☰</button>
@@ -211,6 +294,7 @@ mark{background:var(--hi);padding:0 1px;border-radius:3px}
   <div class="backdrop" id="backdrop"></div>
   <main id="main"></main>
 </div>
+</section><!-- /page-core -->
 
 <script type="text/markdown" data-name="腎細胞癌 RCC" data-sub="本檔涵蓋 RCC 的 **overview（分類/影像/分期/病理）、localized（手術與 adjuvant pembrolizumab）、local advanced、metastatic（IMDC 風險分層、IO/TKI 系統治療">
 # 腎細胞癌（Renal Cell Carcinoma, RCC）　考試導向筆記
@@ -6709,6 +6793,67 @@ PUV：產前雙側水腎+膀胱壁厚 → 出生後 VCUG → 內視鏡瓣膜切�
 
 ---
 
+## 【主題八】重複集尿系統、輸尿管膨出與異位輸尿管（Duplex System / Ureterocele / Ectopic Ureter）★ Weigert-Meyer rule
+
+> 📌 補充主題：原講義（黃欣媚醫師）未專章涵蓋重複集尿系統，但 **Weigert-Meyer rule** 為兒童泌尿經典必考，依 Campbell-Walsh-Wein 標準補入。
+
+**A. 一句話重點**
+完全重複輸尿管遵循 **Weigert-Meyer rule**：**上極輸尿管異位（偏內下方）開口、易阻塞／合併 ureterocele；下極輸尿管正位（偏外上方）開口、隧道短易逆流（VUR）**。
+
+**B. 必背定義／數字**
+- **重複集尿系統（duplex system）**：同一腎臟有兩套腎盂輸尿管，分流上極（upper pole）與下極（lower pole）。可為不完全（兩輸尿管在進膀胱前匯合，Y 字形）或完全（各自開口）。
+- **Weigert-Meyer rule（完全重複）**：
+  - **上極（upper pole）輸尿管 → 異位（ectopic）、開口偏「內下方（inferomedial）」→ 易阻塞，常合併 ureterocele 或異位開口**。
+  - **下極（lower pole）輸尿管 → 正位（orthotopic）、開口偏「外上方（superolateral）」、膀胱內隧道較短 → 易 VUR（逆流）**。
+- **Ureterocele（輸尿管膨出）**：輸尿管末端囊狀擴張，**多見於重複系統的上極輸尿管**；可阻塞同側／對側、引發感染，大者可脫垂阻塞膀胱出口。
+- **異位輸尿管（ectopic ureter）**：開口在正常三角區之外。
+  - **女童**：可開口於**括約肌遠端**（尿道遠端、陰道、前庭）→ **持續性點滴尿失禁（continuous incontinence，正常排尿之外仍持續滲尿）**。
+  - **男童**：開口一律在**括約肌近端**（後尿道、精囊、輸精管）→ **不會尿失禁**，但易反覆 UTI／附睪炎。
+
+**C. 臨床判斷流程**
+```
+產前水腎 / 反覆 UTI / 女童持續滲尿
+  → 腎超音波：上極水腎+下極相對正常？膀胱內 ureterocele(囊狀)？
+       → 重複系統
+            ├ 上極擴張/ureterocele → 想「阻塞」(Weigert-Meyer 上極異位)
+            └ 下極擴張 → VCUG 看 VUR(Weigert-Meyer 下極逆流)
+  → 女童正常排尿仍持續滲尿 → 找「異位輸尿管(括約肌遠端開口)」→ MRU/IVU 定位
+```
+
+**D. 診斷工具與適應症**
+- **腎超音波**：上極水腎、下極狀態、膀胱內 ureterocele（囊狀無回音）。
+- **VCUG**：評估下極 VUR、ureterocele、判斷異位開口是否逆流。
+- **MAG3（利尿腎圖）**：上極分腎功能與阻塞程度（決定保留或切除上極）。
+- **MRU / 顯影尿路攝影**：定位異位輸尿管開口（尤其女童滲尿、上極功能差時）。
+
+**E. 治療策略**
+- **無症狀、上極功能尚可**：可觀察。
+- **Ureterocele**：內視鏡穿刺（puncture，先解阻塞）；視 VUR／上極功能再行上極切除（heminephrectomy）或共同鞘再植（common-sheath reimplant）。
+- **下極 VUR**：比照 VUR 處置（觀察／CAP／手術）。
+- **異位輸尿管**：上極功能差 → 上極部分腎切除＋輸尿管切除；功能尚可 → ureteroureterostomy 或再植。
+
+**F. 考試高頻重點**
+1. **Weigert-Meyer rule：上極異位（內下）＋阻塞／ureterocele；下極正位（外上）＋逆流（VUR）**。
+2. **Ureterocele 幾乎都接上極輸尿管**。
+3. **女童「正常排尿之外持續滴尿」→ 異位輸尿管開口在括約肌遠端**（陰道／尿道遠端）。
+4. **男童異位輸尿管開口在括約肌近端 → 不失禁、但反覆 UTI／附睪炎**。
+5. 影像：上極水腎＋下極 VUR 是重複系統的典型組合。
+
+**G. 容易混淆比較表**
+| 項目 | 上極輸尿管（upper pole） | 下極輸尿管（lower pole） |
+|---|---|---|
+| 開口位置 | 異位、內下（inferomedial） | 正位、外上（superolateral） |
+| 隧道長度 | — | 短 → 易逆流 |
+| 主要併發 | **阻塞、ureterocele** | **VUR（逆流）** |
+| 口訣 | 上極「異位阻塞」 | 下極「正位逆流」 |
+
+**H. 臨床記憶法**
+- **「上極異位阻、下極正位流」**（Weigert-Meyer：upper-pole ectopic/obstruct, lower-pole orthotopic/reflux）。
+- **Ureterocele 找上極**。
+- **女童白天乾、卻一直滴 → 想異位輸尿管（括約肌遠端）**；男童異位「不漏尿，反覆感染」。
+
+---
+
 # 📘 Section 3：最終整合複習
 
 ## 一、一頁式總複習表（One-page Review）
@@ -6723,6 +6868,7 @@ PUV：產前雙側水腎+膀胱壁厚 → 出生後 VCUG → 內視鏡瓣膜切�
 | Cryptorchidism | 腹腔鏡（impalpable） | 手術6–18月；足月3%/1歲1% | impalpable→腹腔鏡 | 超音波無用；雙側查內分泌 |
 | 睪丸扭轉 | 陰囊都卜勒（勿延誤手術） | <6h黃金；>24h多切除 | 高度懷疑直接手術 | 要雙側固定 |
 | PUV | VCUG | 男嬰最常見下尿路阻塞 | 內視鏡瓣膜切除 | 雙腎水腫+膀胱厚=key-hole |
+| **重複系統** | 超音波；VCUG；MAG3 | Weigert-Meyer：上極異位/阻塞、下極正位/逆流 | ureterocele 穿刺、上極切除或再植 | 上極=ureterocele、下極=VUR；女童異位→持續滴尿 |
 
 ---
 
@@ -6814,6 +6960,7 @@ PUV：產前雙側水腎+膀胱壁厚 → 出生後 VCUG → 內視鏡瓣膜切�
 18. **Impalpable testis → 腹腔鏡是金標準**（超音波無用）；血管短用 **Fowler-Stephens**。
 19. 睪丸扭轉 = 急症，**<6 小時黃金**，高度懷疑直接手術並**雙側固定**；blue dot = 附件扭轉。
 20. **PUV = 男嬰最常見下尿路阻塞**；雙腎水腫＋膀胱壁厚＋key-hole sign，VCUG 診斷、內視鏡瓣膜切除。
+21. **Weigert-Meyer rule（重複系統）：上極輸尿管異位（內下）＋阻塞／ureterocele；下極輸尿管正位（外上）＋逆流（VUR）**；女童異位輸尿管（括約肌遠端）→持續性滴尿。
 
 ---
 
@@ -7668,6 +7815,21 @@ const sideEl=document.getElementById('side'),bd=document.getElementById('backdro
 function closeSide(){sideEl.classList.remove('open');bd.classList.remove('show');}
 document.getElementById('menuBtn').onclick=()=>{sideEl.classList.toggle('open');bd.classList.toggle('show');};
 bd.onclick=closeSide;
+
+/* ============ 分頁切換 ============ */
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id==='page-'+id));
+  document.querySelectorAll('.ptab').forEach(t=>t.classList.toggle('active',t.dataset.page===id));
+  if(typeof closeSide==='function')closeSide();
+  window.scrollTo(0,0);
+}
+document.querySelectorAll('.ptab').forEach(t=>{
+  if(t.classList.contains('disabled'))return;
+  t.addEventListener('click',()=>showPage(t.dataset.page));
+});
+document.querySelectorAll('.cover-card[data-goto]').forEach(c=>{
+  c.addEventListener('click',()=>showPage(c.dataset.goto));
+});
 
 /* ============ 啟動 ============ */
 buildSidebar();
