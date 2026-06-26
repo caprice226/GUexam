@@ -231,6 +231,82 @@ header.appbar{position:sticky;top:0;z-index:60;height:var(--appbar-h);
 .cover-foot{text-align:center;color:var(--muted);font-size:12px;margin-top:42px}
 @media(max-width:520px){.cover-title{font-size:34px;letter-spacing:2px}.cover{padding:30px 16px 60px}}
 
+
+/* ---------- 考題練習 quiz ---------- */
+.quiz-wrap{max-width:920px;margin:0 auto;padding:24px 18px 90px}
+.quiz-hero{text-align:center;padding:14px 0 18px;border-bottom:1px solid var(--line);margin-bottom:18px}
+.quiz-hero h1{font-size:26px;margin:0 0 6px;letter-spacing:1px}
+.quiz-subtitle{color:var(--muted);font-size:13.5px}
+.quiz-bar{position:sticky;top:var(--appbar-h);z-index:30;background:var(--bg);
+  display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;
+  padding:10px 0;margin-bottom:14px;border-bottom:1px solid var(--line)}
+.quiz-modes{display:flex;gap:6px}
+.qmode{border:1px solid var(--line);background:#fff;color:var(--muted);font-weight:600;font-size:13px;
+  padding:7px 13px;border-radius:9px;cursor:pointer}
+.qmode.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.quiz-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.scorechip{font-size:13px;color:var(--ink);background:var(--accent-soft);border:1px solid #d4e2f0;
+  padding:6px 12px;border-radius:20px;white-space:nowrap}
+.scorechip b{color:var(--accent)}
+.qbtn{border:1px solid var(--line);background:#fff;color:var(--ink);font-weight:600;font-size:12.5px;
+  padding:7px 12px;border-radius:9px;cursor:pointer}
+.qbtn:hover{border-color:var(--accent);color:var(--accent)}
+.qcard{background:var(--paper);border:1px solid var(--line);border-radius:14px;
+  padding:18px 18px 6px;margin-bottom:16px;box-shadow:var(--shadow)}
+.qhead{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.qnum{background:var(--accent);color:#fff;font-weight:700;font-size:12.5px;padding:3px 9px;border-radius:7px}
+.qtopic{font-size:13px;color:var(--muted);font-weight:600}
+.qcaveat{background:var(--warn-soft);border:1px solid #f0d3cd;color:var(--warn);font-size:12.5px;
+  padding:7px 10px;border-radius:8px;margin-bottom:10px;line-height:1.5}
+.qstem{font-size:15px;font-weight:600;line-height:1.7;margin-bottom:12px}
+.qopts{display:flex;flex-direction:column;gap:8px;margin-bottom:10px}
+.qopt{display:flex;gap:10px;align-items:flex-start;text-align:left;width:100%;
+  border:1px solid var(--line);background:#fcfdff;border-radius:10px;padding:11px 13px;cursor:pointer;
+  font-size:14px;line-height:1.55;color:var(--ink);transition:border-color .12s,background .12s}
+.qopt:hover:not(:disabled){border-color:var(--accent);background:var(--accent-soft)}
+.qopt:disabled{cursor:default}
+.qopt .ol{flex:0 0 22px;height:22px;border-radius:50%;background:var(--line);color:var(--ink);
+  font-weight:700;font-size:12.5px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.qopt .ot{flex:1}
+.qopt.correct{border-color:#2e7d52;background:#eaf6ef}
+.qopt.correct .ol{background:#2e7d52;color:#fff}
+.qopt.wrong{border-color:var(--warn);background:var(--warn-soft)}
+.qopt.wrong .ol{background:var(--warn);color:#fff}
+.qreveal{border:1px dashed var(--accent);background:var(--accent-soft);color:var(--accent);
+  font-weight:600;font-size:13px;padding:8px 14px;border-radius:9px;cursor:pointer;margin-bottom:12px}
+.qexp{border-top:1px dashed var(--line);margin-top:4px;padding:12px 2px 10px}
+.qans{font-size:14px;font-weight:700;margin-bottom:8px}
+.qans b{color:var(--accent);font-size:16px}
+.vok{color:#2e7d52;margin-left:8px}
+.vno{color:var(--warn);margin-left:8px}
+.qexpbody{font-size:13.8px;color:#2c3744;line-height:1.75}
+.qexpbody p{margin:.4em 0}
+.qexpbody ul{margin:.4em 0;padding-left:1.3em}
+.qexpbody li{margin:.25em 0}
+.qexpbody code{background:#eef1f5;padding:1px 5px;border-radius:5px;font-size:.92em}
+.qexpbody strong{color:var(--ink)}
+.quick-review{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-top:26px;box-shadow:var(--shadow)}
+.quick-review h2{font-size:16px;margin:0 0 12px}
+.quick-review ul{margin:0;padding-left:1.2em}
+.quick-review li{margin:.45em 0;font-size:13.6px;line-height:1.7}
+.quick-review code{background:#eef1f5;padding:1px 5px;border-radius:5px;font-size:.92em}
+/* ---------- 補充教學筆記（講義未涵蓋之考點） ---------- */
+.gapnotes{margin-top:30px}
+.gapnotes>h2{font-size:18px;margin:0 0 4px}
+.gapnotes>.gn-intro{color:var(--muted);font-size:13px;line-height:1.7;margin:0 0 14px;
+  background:#fff8e6;border:1px solid #f0e2b8;border-radius:10px;padding:10px 14px}
+.gapcard{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--accent);
+  border-radius:12px;padding:15px 18px;margin:14px 0;box-shadow:var(--shadow)}
+.gapcard h3{font-size:15.5px;margin:0 0 4px;color:var(--accent)}
+.gapcard .gn-q{display:inline-block;font-size:11px;background:#eef1f5;color:var(--muted);
+  padding:1px 8px;border-radius:20px;margin-left:6px;vertical-align:middle;font-weight:600}
+.gapcard h4{font-size:13.5px;margin:11px 0 3px;color:var(--ink)}
+.gapcard ul{margin:.3em 0 0;padding-left:1.2em}
+.gapcard li{margin:.4em 0;font-size:13.4px;line-height:1.72}
+.gapcard strong{color:var(--ink)}
+.gapcard code{background:#eef1f5;padding:1px 5px;border-radius:5px;font-size:.92em}
+@media(max-width:520px){.quiz-bar{flex-direction:column;align-items:stretch}}
+
 </style>
 </head>
 <body>
@@ -239,7 +315,7 @@ header.appbar{position:sticky;top:0;z-index:60;height:var(--appbar-h);
     <div class="app-brand">泌尿科筆記 <small>Urology Notes</small></div>
     <nav class="pagetabs" id="pagetabs">
       <button class="ptab active" data-page="cover">封面</button>
-      <button class="ptab" data-page="core">泌尿科核心課程</button>
+      <button class="ptab" data-page="corehub">泌尿科核心課程</button>
     </nav>
   </div>
 </header>
@@ -256,10 +332,10 @@ header.appbar{position:sticky;top:0;z-index:60;height:var(--appbar-h);
     </div>
     <div class="cover-sec-title">— 內容分頁 —</div>
     <div class="cover-grid">
-      <div class="cover-card" data-goto="core">
+      <div class="cover-card" data-goto="corehub">
         <div class="cc-ico">📚</div>
         <div class="cc-name">泌尿科核心課程</div>
-        <div class="cc-desc">住院醫師核心訓練九大科別考試導向筆記，含 A–H 結構、最後衝刺模式與全文搜尋。</div>
+        <div class="cc-desc">住院醫師核心訓練九大科別考試導向筆記與 114 年考題互動解題。</div>
       </div>
       <div class="cover-card soon">
         <div class="cc-ico">➕</div>
@@ -271,12 +347,38 @@ header.appbar{position:sticky;top:0;z-index:60;height:var(--appbar-h);
   </div>
 </section>
 
-<!-- ================== 泌尿科核心課程 ================== -->
+<!-- ================== 核心課程選單（Hub） ================== -->
+<section class="page" id="page-corehub">
+  <div class="cover">
+    <div class="cover-hero">
+      <div class="cover-kicker">Core Curriculum</div>
+      <h1 class="cover-title" style="font-size:34px">泌尿科核心課程</h1>
+      <div class="cover-sub">請選擇內容</div>
+    </div>
+    <div class="cover-sec-title">— 內容選單 —</div>
+    <div class="cover-grid">
+      <div class="cover-card" data-goto="core">
+        <div class="cc-ico">📚</div>
+        <div class="cc-name">上課講義</div>
+        <div class="cc-desc">住院醫師核心訓練九大科別考試導向筆記，含 A–H 結構、最後衝刺模式與全文搜尋。</div>
+      </div>
+      <div class="cover-card" data-goto="quiz114">
+        <div class="cc-ico">📝</div>
+        <div class="cc-name">114年考題</div>
+        <div class="cc-desc">114 年度核心課程考卷（6/21）· 50 題互動解題 · 自測計分與翻牌複習。</div>
+      </div>
+    </div>
+    <div class="cover-foot">© Chang Yu Yuan · 離線使用 · 僅供個人考試複習</div>
+  </div>
+</section>
+
+<!-- ================== 上課講義（核心課程內文） ================== -->
 <section class="page" id="page-core">
 <header class="top">
   <div class="top-inner">
+    <button class="btn ghost" id="backHub" title="返回核心課程選單" onclick="showPage('corehub')">← 選單</button>
     <button class="btn ghost" id="menuBtn" aria-label="目錄">☰</button>
-    <div class="brand">泌尿科核心課程<small>離線考試複習系統</small></div>
+    <div class="brand">上課講義<small>泌尿科核心課程 · 離線考試複習</small></div>
     <div class="search-wrap">
       <span class="search-ico">🔍</span>
       <input id="search" type="search" placeholder="搜尋中／英文醫學名詞（例：PSA、無精症、Bosniak…）" autocomplete="off">
@@ -295,6 +397,123 @@ header.appbar{position:sticky;top:0;z-index:60;height:var(--appbar-h);
   <main id="main"></main>
 </div>
 </section><!-- /page-core -->
+
+<!-- ================== 114年考題 ================== -->
+<section class="page" id="page-quiz114">
+  <div class="quiz-wrap">
+    <div class="quiz-hero">
+      <div style="text-align:left;margin-bottom:10px"><button class="btn ghost" title="返回核心課程選單" onclick="showPage('corehub')">← 核心課程選單</button></div>
+      <h1>114年考題</h1>
+      <div class="quiz-subtitle">114 年度泌尿科核心訓練課程考卷（6/21）· 共 50 題 · 含題幹、選項與詳解</div>
+    </div>
+    <div class="quiz-bar">
+      <div class="quiz-modes">
+        <button class="qmode active" data-mode="test">📝 自測計分</button>
+        <button class="qmode" data-mode="flip">🔄 翻牌複習</button>
+      </div>
+      <div class="quiz-actions">
+        <span class="scorechip" id="scorechip"></span>
+        <button class="qbtn" id="revealAllBtn">顯示全部答案</button>
+        <button class="qbtn" id="resetQuizBtn">重置</button>
+      </div>
+    </div>
+    <div id="quizList"></div>
+    <div class="quick-review" id="quickReview"></div>
+
+    <!-- ===== 補充教學筆記：講義未涵蓋之考點 ===== -->
+    <div class="gapnotes">
+      <h2>📝 補充教學筆記</h2>
+      <div class="gn-intro">📌 以下主題出現在本次考題、但<strong>原講義（核心課程九科）未涵蓋</strong>，依 Campbell-Walsh-Wein / EAU / NCCN 標準補入，方便對照複習。</div>
+
+      <div class="gapcard">
+        <h3>一、腎臟移植 Kidney Transplantation<span class="gn-q">Q20–23</span></h3>
+        <h4>手術技巧（Q20）</h4>
+        <ul>
+          <li><strong>異位（heterotopic）移植</strong>：移植腎放在<strong>髂窩（iliac fossa）</strong>，常用右側（髂血管較淺、表淺好接）；<strong>原腎一般保留不切除</strong>。</li>
+          <li>血管吻合：腎動脈接 <strong>external iliac artery</strong>（end-to-side）或 internal iliac（end-to-end）；腎靜脈接 external iliac vein。</li>
+          <li>輸尿管：<strong>Lich-Gregoir extravesical ureteroneocystostomy</strong>（抗逆流隧道）接膀胱，多放 <code>double-J stent</code>。</li>
+        </ul>
+        <h4>免疫風險評估（Q21）</h4>
+        <ul>
+          <li><strong>ABO 血型配對</strong> + <strong>HLA 配對</strong>（A/B/DR；DR mismatch 影響最大）。</li>
+          <li><strong>PRA / cPRA</strong>（panel reactive antibody）評估「致敏程度」；偵測 <strong>DSA</strong>（donor-specific antibody）。</li>
+          <li><strong>Crossmatch</strong>：CDC（complement-dependent cytotoxicity）與 flow crossmatch；<strong>陽性 crossmatch／高 PRA = 高排斥風險</strong>。</li>
+          <li>免疫抑制：誘導（basiliximab 或 ATG）→ 維持（tacrolimus + MMF + steroid）。</li>
+        </ul>
+        <h4>活體捐贈者選擇（Q22）</h4>
+        <ul>
+          <li>評估 <strong>GFR／split function</strong>：確保捐贈後殘餘腎功能足夠；CTA 評估雙側血管解剖。</li>
+          <li>原則：<strong>把功能略佳／解剖單純的腎留給捐贈者</strong>，把另一顆捐出。</li>
+          <li>排除：遺傳性腎病、糖尿病、未控制高血壓、惡性腫瘤、活動性感染；含血型、crossmatch、BMI、心理社會評估。</li>
+        </ul>
+        <h4>ABO-incompatible 移植（Q23）</h4>
+        <ul>
+          <li>可行，但需<strong>術前減敏（desensitization）</strong>：plasmapheresis／immunoadsorption 移除 anti-A/anti-B 抗體（降至目標 titer，如 ≤1:8）、rituximab、IVIG。</li>
+          <li>主要風險為 <strong>antibody-mediated rejection（AMR）</strong>；<strong>paired kidney exchange（配對交換）</strong>為替代方案。</li>
+        </ul>
+      </div>
+
+      <div class="gapcard">
+        <h3>二、尿道外傷 Urethral Trauma<span class="gn-q">Q24</span></h3>
+        <ul>
+          <li><strong>Straddle injury（跨坐傷）</strong>→ <strong>bulbar urethra（球部尿道）</strong>損傷，會陰被擠壓於恥骨弓。</li>
+          <li><strong>骨盆骨折</strong>→ <strong>membranous/posterior（膜部後尿道）</strong>損傷。</li>
+          <li>三大徵象：<strong>尿道口出血（blood at meatus）</strong>、無法排尿／尿瀦留、會陰陰囊瘀血（butterfly bruise）；DRE 可見 <strong>high-riding prostate</strong>。</li>
+          <li><strong>關鍵：懷疑尿道損傷時「先別導尿」→ 先做 retrograde urethrogram（RUG）。</strong></li>
+          <li>處置：完全斷裂／後尿道斷裂 → <strong>suprapubic cystostomy</strong> 引流，延遲（約 3 個月後）<strong>urethroplasty</strong>；避免急性期內視鏡操作擴大傷害。並發症：尿道狹窄、ED、失禁。</li>
+        </ul>
+      </div>
+
+      <div class="gapcard">
+        <h3>三、非轉移性去勢抗性攝護腺癌 nmCRPC（M0 CRPC）<span class="gn-q">Q43</span></h3>
+        <ul>
+          <li>定義：ADT 下睪固酮 &lt;50 ng/dL、<strong>PSA 上升</strong>，但傳統影像（CT／bone scan）<strong>無轉移</strong>。</li>
+          <li>高風險指標：<strong>PSADT ≤ 10 個月</strong>（進展為轉移風險高）。</li>
+          <li>治療：在 ADT 之上加<strong>第二代抗雄（ARPI）</strong>：
+            <ul>
+              <li><strong>apalutamide</strong>（SPARTAN）</li>
+              <li><strong>enzalutamide</strong>（PROSPER）</li>
+              <li><strong>darolutamide</strong>（ARAMIS；中樞穿透低、藥物交互作用少）</li>
+            </ul>
+            三者皆顯著延長 <strong>metastasis-free survival 與 OS</strong>。</li>
+        </ul>
+      </div>
+
+      <div class="gapcard">
+        <h3>四、攝護腺癌骨骼健康管理 Bone Health<span class="gn-q">Q44</span></h3>
+        <h4>（A）ADT 引起的骨流失（CTIBL）— 預防骨鬆/骨折</h4>
+        <ul>
+          <li>評估 <strong>FRAX</strong>、補充鈣與維生素 D；必要時 <strong>bisphosphonate</strong> 或 <strong>denosumab 60mg q6mo</strong>（Prolia 劑量）。</li>
+        </ul>
+        <h4>（B）mCRPC 骨轉移 — 預防骨骼相關事件（SRE）</h4>
+        <ul>
+          <li><strong>zoledronic acid 4mg q3–4wk</strong> 或 <strong>denosumab 120mg q4wk</strong>（Xgeva 劑量）。</li>
+          <li>注意 <strong>低血鈣</strong> 與 <strong>下顎骨壞死（ONJ）</strong>，用前先做牙科評估。</li>
+          <li><strong>Radium-223</strong> 用於症狀性骨轉移、無內臟轉移者（兼具存活效益）。</li>
+        </ul>
+      </div>
+
+      <div class="gapcard">
+        <h3>五、膀胱過動症評分 OABSS<span class="gn-q">Q19</span></h3>
+        <ul>
+          <li>OAB 定義：<strong>urgency（急迫感）</strong> ± urge incontinence + frequency + nocturia，且<strong>無感染或其他病因</strong>。</li>
+          <li><strong>OABSS（Overactive Bladder Symptom Score）</strong>：4 題（日間頻尿、夜尿、急尿、急迫性尿失禁），<strong>「急迫感」為核心題</strong>，總分判斷嚴重度。其他工具：排尿日誌、ICIQ-OAB。</li>
+          <li>治療階梯：行為治療 → antimuscarinic／β3-agonist（mirabegron）→ botox／SNM／PTNS。</li>
+        </ul>
+      </div>
+
+      <div class="gapcard">
+        <h3>六、腎臟冷凍消融致死溫度 Cryoablation<span class="gn-q">Q34</span></h3>
+        <ul>
+          <li>小腎腫瘤（small renal mass）的 thermal ablation：<strong>cryoablation</strong> 與 <strong>RFA</strong>。</li>
+          <li><strong>Cryoablation 致死溫度約 −20 ～ −40°C</strong>（一般取 <strong>≤ −40°C</strong> 確保 cell death，採 double freeze-thaw cycle）；RFA 則加熱至 <strong>&gt;60°C</strong>。</li>
+          <li>適應症：腫瘤 &lt;3–4cm、手術高風險／單腎／多發（如 VHL）；局部復發率略高於手術切除。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script type="application/json" id="quiz114-data">{"title": "114 年度泌尿科核心訓練課程考卷（6/21）", "questions": [{"num": 1, "topic": "隱睪症手術時機", "answer": "B", "stem": "關於隱睪症的手術時機，下列何者正確？", "options": {"A": "早產兒建議於出生後6個月內立即接受手術", "B": "足月男嬰若6個月後仍未自然下降，應於12個月內接受手術", "C": "若睪丸可觸及，應延至3歲後再評估是否手術", "D": "小於6個月的嬰兒即使睪丸未下降，也應立即手術"}, "exp": "\u003cp>足月男嬰若 6 個月後仍未自然下降，應安排手術，通常建議在 6–18 個月內完成，越接近 1 歲完成越好。出生後前幾個月仍可能自然下降，因此小於 6 個月通常不急著手術；但超過 6 個月後自然下降機率明顯降低。\u003c/p>\u003cp>\u003cstrong>考點：\u003c/strong> cryptorchidism 的 orchiopexy timing：\u003cstrong>6 個月後不下降 → 轉介／手術，最好 12 個月左右完成。\u003c/strong>\u003c/p>"}, {"num": 2, "topic": "急性陰囊 Doppler 超音波", "answer": "B", "stem": "關於 Doppler 超音波在急性陰囊診斷中的角色，下列敘述何者錯誤？", "options": {"A": "早期睪丸扭轉仍可能顯示有動脈血流", "B": "正常血流可排除睪丸扭轉", "C": "Doppler US 具有高度敏感度與特異性", "D": "操作者經驗影響判讀結果準確性"}, "exp": "\u003cp>「正常血流可排除睪丸扭轉」是錯的。早期或不完全扭轉時，Doppler 仍可能看到動脈血流；若臨床高度懷疑 torsion，不應因 Doppler 有血流就完全排除。\u003c/p>\u003cp>\u003cstrong>考點：\u003c/strong> acute scrotum 最怕 miss torsion。Doppler 有幫助，但\u003cstrong>不能取代臨床判斷\u003c/strong>。\u003c/p>"}, {"num": 3, "topic": "睪丸扭轉處理", "answer": "D", "stem": "關於睪丸扭轉的處理原則，下列敘述何者錯誤？", "options": {"A": "對側睪丸固定術（contralateral orchiopexy）應在確認扭轉後立即同時進行，以預防日後發生異期性側扭轉（metachronous torsion），而非延後選擇性進行", "B": "即使手動復位後症狀緩解，也無法排除殘扭（residual torsion），因此仍需手術探查確認及處理", "C": "雖然扭轉超過24小時導致睪丸壞死的風險高，但是否行睪丸切除（orchiectomy）仍應根據手術中睪丸是否壞死來判斷；有些專家主張即使 >24 小時也可嘗試保留睪丸，以保留可能的內分泌功能或免疫刺激功能", "D": "若 Doppler 超音波有正常的敏感性與特異性，若顯示患側睪丸血流正常，可排除睪丸扭轉的可能性，無需緊急手術探查"}, "exp": "\u003cp>D 選項說 Doppler 顯示患側血流正常即可排除扭轉、不需緊急探查，這是錯誤觀念。Torsion 可呈現 partial torsion、intermittent torsion，甚至早期仍有血流。若病史與理學檢查高度懷疑，仍應緊急手術探查。\u003c/p>\u003cp>\u003cstrong>重點整理：\u003c/strong>\u003c/p>\u003cul>\u003cli>手動復位成功後，仍需 orchiopexy，因為可能殘餘扭轉或再扭轉。\u003c/li>\u003cli>對側 orchiopexy 常同時做，因 bell-clapper deformity 常為雙側傾向。\u003c/li>\u003cli>超過 24 小時不代表一定要 orchiectomy，仍要依術中存活性判斷。\u003c/li>\u003c/ul>"}, {"num": 4, "topic": "Renal duplication / Weigert–Meyer rule", "answer": "D", "stem": "關於腎臟重複畸形（renal duplication）相關之輸尿管病變，下列敘述何者正確？", "options": {"A": "輸尿管膨出（ureterocele）在男童中明顯多於女童", "B": "大多數異位輸尿管（ectopic ureter）與單一系統相關，且多見於女性", "C": "異位輸尿管口在男性通常位於外尿道括約肌以下造成尿失禁", "D": "輸尿管膨出與輸尿管異位最常與雙套系統上極輸尿管相關，符合 Weigert-Meyer rule：上極輸尿管開口較低且內側；而下極輸尿管開口較高且外側，較容易發生膀胱尿逆流（VUR）"}, "exp": "\u003cp>重複腎／雙輸尿管遵循 Weigert–Meyer rule：上腎段輸尿管開口較\u003cstrong>低、內側\u003c/strong>，較容易造成 ureterocele 或 obstructive pattern；下腎段輸尿管開口較\u003cstrong>高、外側\u003c/strong>，較容易有 VUR。\u003c/p>\u003cp>\u003cstrong>排除：\u003c/strong>\u003c/p>\u003cul>\u003cli>Ureterocele 女童多於男童。\u003c/li>\u003cli>Ectopic ureter 常與 duplicated system 相關。\u003c/li>\u003cli>男性 ectopic ureter 通常開口在外括約肌近端，較不會像女性一樣造成持續尿失禁。\u003c/li>\u003c/ul>"}, {"num": 5, "topic": "UTUC 敘述錯誤題", "answer": "D", "stem": "下列有關 upper tract urothelial cancer（UTUC）的敘述何者錯誤？", "options": {"A": "Hereditary UTUC 可能與 Lynch syndrome 相關", "B": "台灣女生發生率比男生多", "C": "Lymphovascular invasion 是一個不好的預後因子", "D": "針對轉移型 UTUC 的第一線治療中，Enfortumab vedotin-efjv monotherapy 是 category 1 的選擇"}, "exp": "\u003cp>Enfortumab vedotin 單藥並不是轉移型 UTUC 第一線治療中的 category 1 選擇。轉移性 urothelial carcinoma 的重要第一線治療趨勢是 \u003cstrong>enfortumab vedotin + pembrolizumab\u003c/strong>，不是 EV monotherapy。\u003c/p>\u003cp>\u003cstrong>其他選項重點：\u003c/strong>\u003c/p>\u003cul>\u003cli>Hereditary UTUC 可與 Lynch syndrome 相關。\u003c/li>\u003cli>Lymphovascular invasion 是不良預後因子。\u003c/li>\u003cli>台灣 UTUC 有其特殊流行病學，與 aristolochic acid exposure 等因素相關。\u003c/li>\u003c/ul>"}, {"num": 6, "topic": "遺傳性 UTUC / Lynch syndrome 危險因子", "answer": "B", "stem": "當懷疑病患有遺傳性上泌尿道上皮腫瘤（UTUC）時，請問下列危險因子何者為非？", "options": {"A": "年紀小於60歲", "B": "個人二等親內親屬在大於70歲罹患遺傳性非息肉性大腸直腸癌症候群（HNPCC）相關腫瘤", "C": "檢測到 mismatch repair（MMR）基因之突變", "D": "個人病史懷疑有遺傳性非息肉性大腸直腸癌症候群（HNPCC）相關腫瘤"}, "exp": "\u003cp>題目問「何者為非」。個人二等親大於 70 歲才罹患 HNPCC 相關腫瘤，遺傳性 Lynch syndrome 的提示性較低。真正需要提高警覺的是較年輕發病、家族中多位 HNPCC 相關癌症、MMR mutation、或個人病史符合 Lynch syndrome 光譜。\u003c/p>\u003cp>\u003cstrong>記法：\u003c/strong> Lynch / HNPCC 想到：年輕、家族聚集、MMR defect、colon / endometrium / UTUC 等相關癌。\u003c/p>"}, {"num": 7, "topic": "膀胱癌治療與 obturator reflex", "answer": "D", "stem": "對於膀胱癌和治療的描述，以下何者為非？", "options": {"A": "CIS（carcinoma in situ）代表高度惡性且容易惡化 / progression", "B": "針對 NMIBC（non-muscle invasive bladder cancer）患者術後的膀胱灌注 BCG 治療，可降低腫瘤的 progression 和 recurrence", "C": "男生發生率比女生高", "D": "膀胱鏡進行 TURBT 時，很容易在 obturator reflex response 時發生 intraperitoneal bladder perforation"}, "exp": "\u003cp>Obturator reflex 主要發生在膀胱側壁 TURBT 時，可能導致突然內收肌收縮與膀胱穿孔，但較典型是側壁 perforation，不宜直接說「很容易發生 intraperitoneal bladder perforation」。Intraperitoneal perforation 比較常見於 dome 或高位穿孔。\u003c/p>\u003cp>\u003cstrong>其他重點：\u003c/strong>\u003c/p>\u003cul>\u003cli>CIS 是 high-grade flat lesion，具進展風險。\u003c/li>\u003cli>BCG 可降低 high-risk NMIBC 的 recurrence 與 progression risk。\u003c/li>\u003cli>膀胱癌男性發生率高於女性。\u003c/li>\u003c/ul>"}, {"num": 8, "topic": "尿路上皮癌與 inverted papilloma", "answer": "B", "stem": "下列有關尿上皮癌的描述，何者有誤？", "options": {"A": "CT urography 對於上泌尿道尿上皮癌具有極高的敏感性與特異性", "B": "Type 2 inverted papillomas 是良性的腫瘤，不需要密切的追蹤", "C": "止痛藥濫用（Analgesic abuse）是導致上泌尿道尿路上皮癌（UTUC）的一個已知危險因子", "D": "肌肉侵犯型尿路上皮癌（病理分期為 pT2 以上）在基因變異上（無論在質或量方面）均比低期別的疾病來得更多"}, "exp": "\u003cp>Inverted papilloma 多為良性，但仍需與 urothelial carcinoma 鑑別，且有復發或合併尿路上皮癌報告，因此不能簡化成「完全不需要密切追蹤」。\u003c/p>\u003cp>\u003cstrong>其他重點：\u003c/strong>\u003c/p>\u003cul>\u003cli>CT urography 對 UTUC 診斷有高敏感性與特異性。\u003c/li>\u003cli>Analgesic abuse，特別是 phenacetin 類，與 urothelial carcinoma 風險相關。\u003c/li>\u003cli>肌肉侵犯型尿路上皮癌通常累積較多 molecular alterations。\u003c/li>\u003c/ul>"}, {"num": 9, "topic": "轉移性尿路上皮癌第一線治療", "answer": "A", "stem": "對於轉移型泌尿上皮癌的第一線治療策略，以下何者描述有誤？", "options": {"A": "對於適合組合治療的轉移性尿路上皮癌患者，應首選鉑類化療（platinum-based chemotherapy）聯合免疫檢查點抑制劑（checkpoint inhibitor）Pembrolizumab", "B": "Enfortumab vedotin-ejfv 和 pembrolizumab 組合治療是 category 1 的選擇", "C": "給予化學治療後，可使用 avelumab 作為 maintenance 治療", "D": "對於 cisplatin-ineligible 的病患，可使用 carboplatin 取代 cisplatin，接著 avelumab 作為 maintenance 治療"}, "exp": "\u003cp>適合 combination therapy 的轉移性尿路上皮癌，目前關鍵是 \u003cstrong>enfortumab vedotin + pembrolizumab\u003c/strong>。A 選項若描述為 platinum-based chemotherapy 直接聯合 pembrolizumab 作為標準第一線，並非主要標準敘述。\u003c/p>\u003cp>\u003cstrong>正確概念：\u003c/strong>\u003c/p>\u003cul>\u003cli>EV + pembrolizumab 是重要第一線選項。\u003c/li>\u003cli>若採 platinum chemotherapy，無惡化後可接 avelumab maintenance。\u003c/li>\u003cli>Cisplatin-ineligible 可用 gemcitabine + carboplatin，之後視情況接 avelumab maintenance。\u003c/li>\u003c/ul>"}, {"num": 10, "topic": "SEMS trial / early metastatic seminoma", "answer": "B", "stem": "SEMS trial 相關於早期轉移性 seminoma 的一期試驗，下列何者敘述錯誤？", "options": {"A": "FDG-PET scan 可能有助於提高 staging 的準確性，但還需要更大規模的研究", "B": "FDG-PET scan 能準確地確定陽性淋巴結的數量", "C": "對於 PET scan 和病理檢驗淋巴結呈陽性的患者，PET scan 準確識別陽性淋巴結數量的機率僅約 50%", "D": "臨床試驗中 primary seminoma，RPLND 後的 pN0 發生率為 9–16%"}, "exp": "\u003cp>FDG-PET 對 seminoma 淋巴結評估有幫助，但不能準確地確定所有陽性淋巴結數量，尤其在小淋巴結或 microscopic disease 上有限制。\u003c/p>\u003cp>\u003cstrong>考點：\u003c/strong> FDG-PET 可輔助 staging，但 early metastatic seminoma 若要用 RPLND 作治療，仍不能完全依賴 PET 判斷 microscopic nodal disease。\u003c/p>"}, {"num": 11, "topic": "取決於題目是問傳統 guideline 還是 RPLND 研究分析", "answer": "C", "stem": "關於 CS II 原發性睪丸癌的腹膜後淋巴結清掃術（RPLND）分析，下列何者敘述錯誤？", "options": {"A": "RPLND 是 CS IIA/B 和復發性 CSI 的主要治療選擇", "B": "Open RPLND 是 primary RPLND 的 gold standard technique，但陽痿發生率為 10–20%", "C": "Robotic RPLND 表現出較低的平均住院時間和平均估計失血量，併發症發生率或中位數淋巴結產量也顯著較低", "D": "若手術者具有豐富經驗，則 Robotic RPLND 可以納入 guideline"}, "exp": "\u003cp>Robotic RPLND 通常有較少失血、較短住院時間等優勢，但其淋巴結產量、復發率、長期腫瘤控制仍取決於經驗與 case selection。C 選項把 robotic RPLND 的結果說得過於絕對，因此判為錯誤。\u003c/p>\u003cp>\u003cstrong>重點：\u003c/strong>\u003c/p>\u003cul>\u003cli>Open RPLND 仍是最傳統、最標準的技術基準。\u003c/li>\u003cli>Robotic RPLND 可在有經驗中心進行，但不能把所有結果簡化成全面優於 open。\u003c/li>\u003c/ul>", "caveat": "⚠️ 答案疑義：取決於題目是問傳統 guideline 還是 RPLND 研究分析　→ 建議：RPLND 在 stage II seminoma 屬 selected / de-escalation"}, {"num": 12, "topic": "Incidental adrenal mass", "answer": "B", "stem": "關於 2023 年發表的 CUA/AUA Guideline，討論 incidentally discovered adrenal mass，下列何者敘述錯誤？", "options": {"A": "對於無法確定性質的腎上腺腫瘤，首選檢查為 non-contrast CT", "B": "建議將常規進行腫瘤穿刺，作為評估的一部分", "C": "對於 \u003c4 公分之良性非功能性腺瘤、含 macroscopic fat 的腫瘤，不需進一步影像或功能檢查", "D": "對於有高血壓和 / 或低血鉀的患者，應以醛固酮與腎素比值（ARR），篩檢原發性醛固酮增多症"}, "exp": "\u003cp>腎上腺偶發瘤不建議常規穿刺。穿刺前必須先排除 pheochromocytoma，而且通常只有在懷疑 metastasis、影像與功能評估仍無法定論、且結果會改變治療時才考慮。\u003c/p>\u003cp>\u003cstrong>正確流程重點：\u003c/strong>\u003c/p>\u003cul>\u003cli>Non-contrast CT 評估 HU 值與脂肪含量。\u003c/li>\u003cli>評估是否功能性：cortisol autonomy、pheochromocytoma、primary aldosteronism 等。\u003c/li>\u003cli>高血壓或低血鉀要想到 aldosterone-renin ratio。\u003c/li>\u003c/ul>"}, {"num": 13, "topic": "復發部位與 template、研究族群有關，敘述若太絕對可疑", "answer": "B", "stem": "對於 stage II seminoma，一些臨床試驗在研究 retroperitoneal lymph node dissection（RPLND）當作第一線治療的效果，下列何者敘述錯誤？", "options": {"A": "單側與雙側切除的 2 年無復發生存率差異不大", "B": "復發主要發生在 retroperitoneum 之外，且單側手術的復發率較高", "C": "精原細胞瘤的轉移常見區域為左側的 para-aortic 區和右側的 interaortocaval 區", "D": "精原細胞瘤對側區域的 microscopic 轉移率為 6% 至 11.1%"}, "exp": "\u003cp>題目問錯誤敘述。B 選項將復發型態與 unilateral surgery 的復發風險描述得過於絕對。Stage II seminoma 的 RPLND 研究重點在於 de-escalation，復發位置、template 範圍與病人選擇都會影響結果。\u003c/p>\u003cp>\u003cstrong>記法：\u003c/strong> Seminoma 的典型 landing zone：\u003c/p>\u003cul>\u003cli>左側睪丸：para-aortic 區域。\u003c/li>\u003cli>右側睪丸：interaortocaval / paracaval 區域。\u003c/li>\u003c/ul>", "caveat": "⚠️ 答案疑義：復發部位與 template、研究族群有關，敘述若太絕對可疑　→ 建議：記 seminoma landing zone"}, {"num": 14, "topic": "Primary aldosteronism screening", "answer": "C", "stem": "針對 Primary Aldosterone 進行篩檢的適應證，何者為非？", "options": {"A": "Severe hypertension（>160/110）", "B": "Early-onset hypertension（\u003c20 year）or stroke（\u003c50 years）", "C": "Unexplained hyponatremia（spontaneous or diuretic induced）", "D": "Whenever considering secondary causes of hypertension（i.e., pheochromocytoma or renovascular disease）"}, "exp": "\u003cp>Primary aldosteronism 典型是高血壓合併低血鉀，或 resistant / severe hypertension。C 選項的 unexplained hyponatremia 不是典型篩檢適應症。\u003c/p>\u003cp>\u003cstrong>常見篩檢情境：\u003c/strong>\u003c/p>\u003cul>\u003cli>Severe hypertension。\u003c/li>\u003cli>Resistant hypertension。\u003c/li>\u003cli>Hypertension with spontaneous or diuretic-induced hypokalemia。\u003c/li>\u003cli>Hypertension with adrenal incidentaloma。\u003c/li>\u003cli>年輕型高血壓或早發中風家族／個人史。\u003c/li>\u003c/ul>"}, {"num": 15, "topic": "Fowler syndrome", "answer": "A", "stem": "關於 Fowler syndrome 何者為非？", "options": {"A": "常發生於嬰幼兒", "B": "是一種功能性排尿障礙", "C": "尿路動力學檢查會發現排尿期 EMG 活動度上升", "D": "會表現出下腹痛、困難小便等症狀"}, "exp": "\u003cp>Fowler syndrome 主要發生在年輕女性，表現為 urinary retention、排尿困難，與 urethral sphincter relaxation failure 有關，不是嬰幼兒常見疾病。\u003c/p>\u003cp>\u003cstrong>考點：\u003c/strong> young woman + painless urinary retention + abnormal sphincter EMG → Fowler syndrome。\u003c/p>"}, {"num": 16, "topic": "Pressure-flow study", "answer": "A", "stem": "以下何者 Pressure-flow study 中的數值並不是直接測量得到？", "options": {"A": "Detrusor pressure", "B": "Intraabdominal pressure", "C": "EMG", "D": "膀胱內壓力"}, "exp": "\u003cp>Pressure-flow study 會量測 vesical pressure 與 abdominal pressure，detrusor pressure 是由：\u003c/p>\u003cp>```text\u003c/p>\u003cp>Pdet = Pves - Pabd\u003c/p>\u003cp>```\u003c/p>\u003cp>計算而來，不是單一感測器直接測到的壓力。\u003c/p>"}, {"num": 17, "topic": "Female bladder outlet obstruction 公式", "answer": "D", "stem": "以下何者不是常用來評估 female bladder outlet obstruction 的公式？", "options": {"A": "PdetQmax >50 cm water and Qmax \u003c12 ml/s", "B": "PdetQmax >20 cm water and Qmax \u003c12 ml/s", "C": "PdetQmax >20 cm water and Qmax \u003c15 ml/s", "D": "PdetQmax - 2 × Qmax >40"}, "exp": "\u003cp>D 選項 \u003ccode>PdetQmax - 2 × Qmax &gt; 40\u003c/code> 是男性常用的 bladder outlet obstruction index 概念，不是女性 BOO 常用公式。\u003c/p>\u003cp>\u003cstrong>女性 BOO 常見判斷方向：\u003c/strong>\u003c/p>\u003cul>\u003cli>Qmax 低。\u003c/li>\u003cli>PdetQmax 升高。\u003c/li>\u003cli>可使用不同 nomogram 或 cut-off，例如 PdetQmax &gt; 20 cmH₂O 且 Qmax &lt; 12–15 mL/s 等。\u003c/li>\u003c/ul>"}, {"num": 18, "topic": "Detrusor underactivity 治療證據", "answer": "A", "stem": "下列何者對於 detrusor underactivity 的治療，證據力何者最弱？", "options": {"A": "Parasympathomimetics", "B": "Sacral neuromodulation", "C": "Bio feedback", "D": "Bladder outlet obstruction surgery"}, "exp": "\u003cp>Parasympathomimetics，例如 bethanechol，理論上可促進 detrusor contraction，但臨床證據薄弱，效果不穩定，副作用也限制使用。\u003c/p>\u003cp>\u003cstrong>相對較有角色者：\u003c/strong>\u003c/p>\u003cul>\u003cli>Sacral neuromodulation：部分 non-obstructive urinary retention 可考慮。\u003c/li>\u003cli>Biofeedback：若合併 dysfunctional voiding 可有幫助。\u003c/li>\u003cli>若有 BOO，解除 outlet obstruction 有時可改善排尿。\u003c/li>\u003c/ul>"}, {"num": 19, "topic": "OAB symptom score", "answer": "C", "stem": "關於 OAB symptoms score 何者不在評估的項目之中？", "options": {"A": "Urgency continence", "B": "Nocturia", "C": "Quality of life", "D": "Frequency"}, "exp": "\u003cp>OABSS 通常評估 daytime frequency、nocturia、urgency、urgency incontinence。Quality of life 不是 OABSS 的原始計分項目，雖然其他問卷如 OAB-q 會納入生活品質。\u003c/p>"}, {"num": 20, "topic": "腎臟移植手術技巧", "answer": "A", "stem": "下列關於腎臟移植手術的敘述，何者正確？", "options": {"A": "膀胱與移植腎輸尿管的吻合可採用 Lich-Gregoir 技術以減少逆流風險", "B": "移植腎靜脈接合至下腔靜脈，以確保足夠回流", "C": "移植腎多先截斷腎動脈及以冷灌流，並減少輸尿管張力", "D": "選擇捐贈腎的處理考量，因右腎血管較長，利於手術操作  > 註：第20題照片角度較斜，B–D 選項部分文字依可辨識內容整理。"}, "exp": "\u003cp>移植腎的 ureteroneocystostomy 可採 Lich–Gregoir technique，具有抗逆流設計，是常見技術之一。\u003c/p>\u003cp>\u003cstrong>排除重點：\u003c/strong>\u003c/p>\u003cul>\u003cli>移植腎通常放在 iliac fossa，不是原腎位置。\u003c/li>\u003cli>血管吻合多接 external iliac artery / vein 或相關 iliac vessels，不是常規接下腔靜脈。\u003c/li>\u003cli>donor 腎血管長短、左右腎選擇需依血管解剖與安全性判斷。\u003c/li>\u003c/ul>"}, {"num": 21, "topic": "腎臟移植免疫風險評估", "answer": "B", "stem": "關於腎臟移植前的免疫風險評估，下列敘述何者正確？", "options": {"A": "Panel Reactive Antibody（PRA）代表病人曾經接受過的免疫抑制治療反應程度", "B": "有 donor-specific antibody（DSA）時，CDC crossmatch 可能仍為陰性", "C": "CDC crossmatch 陽性時可進行移植，但需增加免疫抑制劑劑量", "D": "HLA mismatch 數量非禁忌，但可能增加或決定風險"}, "exp": "\u003cp>DSA 存在時，CDC crossmatch 仍可能為陰性，特別是低濃度或 non-complement-fixing antibody。因此移植前評估不能只看 CDC crossmatch，也要看 solid-phase assay、DSA、HLA mismatch 等。\u003c/p>\u003cp>\u003cstrong>重點比較：\u003c/strong>\u003c/p>\u003cul>\u003cli>PRA：代表病人對 HLA 的 sensitization 程度，不是免疫抑制治療反應。\u003c/li>\u003cli>Positive CDC crossmatch 通常代表 hyperacute rejection 風險高，不可簡單用「加強免疫抑制」解決。\u003c/li>\u003cli>HLA mismatch 不是絕對禁忌，但會影響排斥與長期 graft outcome。\u003c/li>\u003c/ul>"}, {"num": 22, "topic": "活體腎臟捐贈者選擇", "answer": "C", "stem": "關於活體腎臟捐贈者估選擇，下列何者錯誤？", "options": {"A": "若兩側腎功能相當，應優先選擇副構造較簡單的一側進行捐贈", "B": "捐贈者接受腹部影像檢查以評估腎血管及泌尿構造", "C": "有家族性腎病史的捐贈者，只要目前腎功能正常即可捐贈", "D": "eGFR 需在一定標準以上，且評估須排除慢性腎臟疾病或蛋白尿"}, "exp": "\u003cp>有家族性腎病史者，即使目前腎功能正常，也不能直接認定可以捐贈。必須釐清遺傳性腎病風險、蛋白尿、影像、GFR、血壓、代謝風險等。\u003c/p>\u003cp>\u003cstrong>原則：\u003c/strong> donor safety 優先。若兩腎功能相當，通常保留較好的腎給 donor，並選擇血管／泌尿結構較適合取出的腎作移植。\u003c/p>"}, {"num": 23, "topic": "ABO-incompatible kidney transplantation", "answer": "D", "stem": "關於 ABO 不相容腎臟移植（ABOi）的敘述，何者正確？", "options": {"A": "ABOi 移植無須進行減敏處理，成功率與 ABOc 相同", "B": "Rituximab 可用於減少 T 細胞活化以預防排斥", "C": "ABOi 移植後主 AMR 的風險低於 ABO 相容移植", "D": "ABOi 病人術前通常需要接受血漿置換或雙重血漿置換以降低抗 A/B 抗體"}, "exp": "\u003cp>ABO-incompatible transplantation 術前常需 desensitization，例如 rituximab、plasmapheresis / double-filtration plasmapheresis、IVIG 等，以降低 anti-A / anti-B antibody titer。\u003c/p>\u003cp>\u003cstrong>排除：\u003c/strong>\u003c/p>\u003cul>\u003cli>Rituximab 主要作用於 B cell，不是 T cell。\u003c/li>\u003cli>ABO-incompatible transplant 的 antibody-mediated rejection 風險較高，不能說低於 ABO-compatible transplant。\u003c/li>\u003cli>不是完全不需減敏。\u003c/li>\u003c/ul>"}, {"num": 24, "topic": "Straddle injury 尿道傷害", "answer": "D", "stem": "關於會陰部跨傷（straddle injury）導致的尿道損傷，下列敘述何者正確？", "options": {"A": "主要影響後尿道", "B": "常見於女性患者", "C": "不會引起尿道出血", "D": "可能導致尿道球部損傷"}, "exp": "\u003cp>Straddle injury 典型造成 anterior urethra，尤其是 bulbar urethra 損傷。\u003c/p>\u003cp>\u003cstrong>典型表現：\u003c/strong>\u003c/p>\u003cul>\u003cli>會陰部撞擊史。\u003c/li>\u003cli>尿道口出血。\u003c/li>\u003cli>排尿困難或尿滯留。\u003c/li>\u003cli>影像可用 retrograde urethrography 評估。\u003c/li>\u003c/ul>"}, {"num": 25, "topic": "NIH prostatitis category IIIA", "answer": "B", "stem": "依據攝護腺炎臨床症狀有無與 2-Glass Test（PPMT）之結果使用 National institutes of health 的分類中，下列何者屬於 Category IIIA？", "options": {"A": "有症狀，Pre-Massage 無細菌且有 WBC，Post-Massage 有細菌且有 WBC", "B": "有症狀，Pre-Massage 無細菌且無 WBC，Post-Massage 無細菌且有 WBC", "C": "有症狀，Pre-Massage 無細菌且無 WBC，Post-Massage 有細菌且無 WBC", "D": "無症狀，Pre-Massage 無細菌且無 WBC，Post-Massage 無細菌且有 WBC"}, "exp": "\u003cp>Category IIIA 是 inflammatory chronic pelvic pain syndrome：有症狀、培養無細菌，但 post-massage urine / EPS 有 WBC。\u003c/p>\u003cp>\u003cstrong>2-glass PPMT 判讀：\u003c/strong>\u003c/p>\u003cul>\u003cli>Pre-massage：代表膀胱尿液。\u003c/li>\u003cli>Post-massage：反映前列腺按摩後分泌物。\u003c/li>\u003cli>IIIA：culture negative，但 post-massage WBC positive。\u003c/li>\u003cli>IIIB：culture negative，且 WBC negative。\u003c/li>\u003c/ul>"}, {"num": 26, "topic": "皮膚／性病與病原配對", "answer": "A", "stem": "關於下列各種疾病與其致病病原體之配對何者錯誤？", "options": {"A": "Eczema herpeticum - HPV", "B": "Condylomata lata - Syphilis", "C": "Chancre - Syphilis", "D": "Molluscum contagiosum - pox virus"}, "exp": "\u003cp>Eczema herpeticum 是 HSV infection，不是 HPV。\u003c/p>\u003cp>\u003cstrong>其他配對：\u003c/strong>\u003c/p>\u003cul>\u003cli>Condylomata lata：secondary syphilis。\u003c/li>\u003cli>Chancre：primary syphilis。\u003c/li>\u003cli>Molluscum contagiosum：poxvirus。\u003c/li>\u003c/ul>"}, {"num": 27, "topic": "性病與病原配對", "answer": "C", "stem": "關於以下疾病對應的致病菌 / 相關菌種或病毒，何者錯誤？", "options": {"A": "Reiter syndrome - Chlamydia", "B": "Lymphogranuloma venereum - Chlamydia", "C": "Chancroid - Haemophilus influenzae", "D": "Jarisch-Herxheimer reaction - Treponema pallidum"}, "exp": "\u003cp>Chancroid 的病原是 \u003cstrong>Haemophilus ducreyi\u003c/strong>，不是 Haemophilus influenzae。\u003c/p>\u003cp>\u003cstrong>其他配對：\u003c/strong>\u003c/p>\u003cul>\u003cli>Reiter syndrome / reactive arthritis 可由 Chlamydia trachomatis 觸發。\u003c/li>\u003cli>Lymphogranuloma venereum：Chlamydia trachomatis L1–L3。\u003c/li>\u003cli>Jarisch–Herxheimer reaction：治療 syphilis 等 spirochete infection 後可發生。\u003c/li>\u003c/ul>"}, {"num": 28, "topic": "腹腔鏡／婦科手術併發症", "answer": "A", "stem": "關於腹腔鏡手術併發症的敘述何者正確？", "options": {"A": "在手術初期若懷疑穿刺器或腹腔鏡套管（Trocar）造成血管受損，絕對不可立即移除穿刺器或套管，待建立替代通道並仔細評估血管受損情況才決定是否移除", "B": "術後發現乳糜性腹水（Chylous ascites）建議需一律執行連續抽吸引流以降低術後併發症", "C": "不熟悉腹腔手術者或是之前開刀腹部經歷者無法施行 Hasson technique 以降低腸道或血管受損風險", "D": "若造成輕度的腸道熱傷，經常在手術 24 小時內出現症狀合併腸道壞死"}, "exp": "\u003cp>初始 trocar 或 Veress needle 進入時若造成大血管損傷，不應貿然拔除造成失控出血。通常需保留器械位置，立即評估並準備修補或轉開腹。\u003c/p>\u003cp>\u003cstrong>考點：\u003c/strong> major vascular injury 的第一步不是「拔掉再說」，而是控制出血與準備 definitive repair。\u003c/p>"}, {"num": 29, "topic": "Double dye test / 尿路陰道瘻", "answer": "C", "stem": "關於手術後併發泌尿系統之瘻管的敘述，下列何者正確？", "options": {"A": "Double dye test 中若出現黃色代表有膀胱陰道瘻管", "B": "Double dye test 中若出現藍色代表有輸尿管陰道瘻管", "C": "Double dye test 中若出現藍色與橘色混合，則可能合併有輸尿管陰道瘻管及尿道陰道瘻管或膀胱尿道瘻管；需視藍色出現在中段陰道紗布（棉棒）或前段陰道棉棒判斷", "D": "若診斷有膀胱陰道瘻管，優先嘗試放置輸尿管導管並且在兩週後重新進行影像評估是否仍有瘻管  > 註：第29題 C、D 選項照片較模糊，已依可辨識內容整理。"}, "exp": "\u003cp>Double dye test 可區分 vesicovaginal fistula 與 ureterovaginal fistula。膀胱內注入 methylene blue，口服 phenazopyridine 使尿液呈橘黃色：\u003c/p>\u003cul>\u003cli>藍色陰道液：膀胱陰道瘻。\u003c/li>\u003cli>橘黃色但非藍色：輸尿管陰道瘻。\u003c/li>\u003cli>兩者都有：可能合併膀胱／尿道與輸尿管瘻。\u003c/li>\u003c/ul>\u003cp>因此 C 描述最符合。\u003c/p>"}, {"num": 30, "topic": "R.E.N.A.L. nephrometry score", "answer": "C", "stem": "R.E.N.A.L. score 是用來評估腎臟部分切除的風險工具之一，下列對其敘述何者為非？", "options": {"A": "R（radius）是指腫瘤直徑大小", "B": "E（exo/endophytic）是指腫瘤在腎臟深度表現", "C": "N（near）是指腫瘤與腎臟血管的距離", "D": "L（location）是指腫瘤與 renal polar line 的相關性"}, "exp": "\u003cp>R.E.N.A.L. score 用於評估腎腫瘤部分腎切除的解剖複雜度。字母意義如下：\u003c/p>\u003cp>```text\u003c/p>\u003cp>R = Radius：腫瘤大小\u003c/p>\u003cp>E = Exophytic / endophytic：外生或內生比例\u003c/p>\u003cp>N = Nearness：距 collecting system 或 renal sinus 的距離\u003c/p>\u003cp>A = Anterior / posterior：前後位置\u003c/p>\u003cp>L = Location：相對 polar line 的位置\u003c/p>\u003cp>```\u003c/p>\u003cp>若 C 選項把 N 解釋成與「腎包膜」或其他錯誤結構的距離，則為錯誤。\u003c/p>"}, {"num": 31, "topic": "最高疑慮；IMDC 標準因子是「高 corrected calcium、高 neutrophil、高 platelet、低 Hb、KPS\u003c80、診斷到治療\u003c1年」，因此選項設計可能有瑕疵", "answer": "A", "stem": "治療轉移性腎癌，首先會把病患依風險分層（risk stratifications），在選擇藥物性治療。其中 international metastatic renal cell carcinoma database consortium（IMDC）分類中，下列何者不是風險因子？", "options": {"A": "低血鈣", "B": "血小板低下", "C": "白血球低下", "D": "貧血"}, "exp": "", "caveat": "⚠️ 答案疑義：最高疑慮；IMDC 標準因子是「高 corrected calcium、高 neutrophil、高 platelet、低 Hb、KPS\u003c80、診斷到治療\u003c1年」，因此選項設計可能有瑕疵　→ 建議：不要死背 A，記標準 IMDC"}, {"num": 32, "topic": "Favorable-risk metastatic clear cell RCC 第一線治療", "answer": "B", "stem": "根據 NCCN Guideline，針對轉移性 clear cell type renal cell carcinoma、favorable risk group patients，有關第一線治療的 category 1 建議，下列何者未列入其中？", "options": {"A": "Axitinib + pembrolizumab", "B": "Ipilimumab + nivolumab", "C": "Cabozantinib + nivolumab", "D": "Lenvatinib + pembrolizumab"}, "exp": "\u003cp>Nivolumab + ipilimumab 主要用於 intermediate / poor-risk metastatic RCC。Favorable-risk clear cell RCC 的 category 1 第一線選項通常以 IO + TKI 組合為主，例如 pembrolizumab + axitinib、nivolumab + cabozantinib、pembrolizumab + lenvatinib 等。\u003c/p>\u003cp>\u003cstrong>記法：\u003c/strong> Ipi + nivo = intermediate / poor risk 更典型。\u003c/p>"}, {"num": 33, "topic": "D ASSURE 是典型陰性 trial；但 PROTECT 也不是明確正向標準治療 trial，題幹若寫得太寬可爭議", "answer": "D", "stem": "針對晚期腎癌所進行的輔助性藥物治療，下列那一個研究沒有治療效果（如 disease-free survival or overall survival）？", "options": {"A": "S-TRAC trial", "B": "PROTECT trial", "C": "Keynote 574 trial", "D": "ASSURE trial"}, "exp": "\u003cp>ASSURE trial 是典型陰性研究。它評估術後 adjuvant sunitinib 或 sorafenib 對高風險 RCC 的效果，結果未能改善 disease-free survival，也未建立整體存活優勢，因此不是目前會被記成「有效輔助治療」的研究。\u003c/p>\u003cp>\u003cstrong>選項比較：\u003c/strong>\u003c/p>\u003cul>\u003cli>\u003cstrong>S-TRAC trial\u003c/strong>：sunitinib adjuvant 在高風險 clear cell RCC 有 DFS benefit，但 OS benefit 不明確。\u003c/li>\u003cli>\u003cstrong>PROTECT trial\u003c/strong>：pazopanib adjuvant 整體結果較複雜，未成為標準治療，但有劑量與分析族群差異；考試上通常不如 ASSURE 典型。\u003c/li>\u003cli>\u003cstrong>KEYNOTE-564\u003c/strong>：題目寫 Keynote 574 應為筆誤；pembrolizumab adjuvant 有 DFS benefit，後續也有 OS benefit 訊號，是目前重要的 positive trial。\u003c/li>\u003cli>\u003cstrong>ASSURE trial\u003c/strong>：陰性，無明確 DFS / OS benefit。\u003c/li>\u003c/ul>\u003cp>\u003cstrong>考點：\u003c/strong> RCC adjuvant trial 口訣：\u003cstrong>S-TRAC 有 DFS、KEYNOTE-564 最重要；ASSURE 陰性。\u003c/strong>\u003c/p>", "caveat": "⚠️ 答案疑義：D ASSURE 是典型陰性 trial；但 PROTECT 也不是明確正向標準治療 trial，題幹若寫得太寬可爭議　→ 建議：考試多半抓 ASSURE 陰性"}, {"num": 34, "topic": "cryoablation 的 lethal temperature 在不同教材有 -18、-20、-40°C 等差異", "answer": "A", "stem": "下列關於腎臟的局部治療，下列何者錯誤？", "options": {"A": "冷凍治療（cryoablation）的目標，是讓作用組織的溫度低於 -18°C", "B": "射頻燒灼（radiofrequency ablation）的目標，是讓作用組織的溫度至少高於 70°C", "C": "冷凍治療的冰球，應超過腫瘤邊界至少 5–10 mm，以確保冰球完整", "D": "局部治療後追蹤的影像，腫瘤失去 contrast enhancement，可視為組織被破壞"}, "exp": "\u003cp>題目問「何者錯誤」。Cryoablation 的重點不是只讓組織溫度低於 -18°C 就足夠。實務上需讓腫瘤內部達到更低的 lethal temperature，常以約 -20°C 至 -40°C 作為有效破壞區的概念；影像上可見的 ice ball 邊緣約為 0°C，真正致死等溫線在 ice ball 內側，因此需要讓 ice ball 超出腫瘤邊界。\u003c/p>\u003cp>\u003cstrong>其他選項重點：\u003c/strong>\u003c/p>\u003cul>\u003cli>RFA 透過高溫造成 coagulative necrosis，常以 60–100°C 的熱破壞區為目標，70°C 以上的概念可接受。\u003c/li>\u003cli>Cryoablation 的 ice ball 通常需超出腫瘤邊緣約 5–10 mm，以確保腫瘤外緣也被充分冷凍。\u003c/li>\u003cli>治療後追蹤影像若腫瘤失去 contrast enhancement，代表局部組織壞死、治療反應較佳。\u003c/li>\u003c/ul>\u003cp>\u003cstrong>考點：\u003c/strong> cryoablation 看到的冰球邊緣不等於致死邊界，所以要有安全 margin。\u003c/p>", "caveat": "⚠️ 答案疑義：cryoablation 的 lethal temperature 在不同教材有 -18、-20、-40°C 等差異　→ 建議：回講義確認老師版本"}, {"num": 35, "topic": "Struvite stone 與 urease-producing bacteria", "answer": "B", "stem": "下列何種細菌和鳥糞石（Struvite stone）的形成較不相關？", "options": {"A": "變形桿菌（Proteus species）", "B": "大腸桿菌（E. coli）", "C": "綠膿桿菌（Pseudomonas species）", "D": "克雷伯氏菌（Klebsiella species）"}, "exp": "\u003cp>Struvite stone 是感染性結石，與 \u003cstrong>urease-producing bacteria\u003c/strong> 相關。Urease 會分解尿素產生 ammonia，使尿液鹼化，促進 magnesium ammonium phosphate 結晶形成。\u003c/p>\u003cp>\u003cstrong>常見相關細菌：\u003c/strong>\u003c/p>\u003cul>\u003cli>Proteus species：最典型。\u003c/li>\u003cli>Klebsiella species：可有 urease。\u003c/li>\u003cli>Pseudomonas species：可相關。\u003c/li>\u003c/ul>\u003cp>\u003cstrong>E. coli\u003c/strong> 通常不是典型 urease-producing organism，因此與 struvite stone 的形成較不相關。\u003c/p>\u003cp>\u003cstrong>考點：\u003c/strong> struvite = infection stone = urease = alkaline urine；最常考 Proteus。\u003c/p>"}, {"num": 36, "topic": "尿酸結石非手術治療", "answer": "D", "stem": "治療尿酸結石的非手術治療，最適當者為？", "options": {"A": "限制食物鈣", "B": "allopurinol", "C": "thiazide", "D": "檸檬酸鉀"}, "exp": "\u003cp>尿酸結石最重要的非手術治療是\u003cstrong>尿液鹼化\u003c/strong>，常用 potassium citrate，使尿液 pH 維持約 6.0–6.5，可溶解或預防尿酸結石。\u003c/p>\u003cp>\u003cstrong>排除：\u003c/strong>\u003c/p>\u003cul>\u003cli>限制普林飲食可作為輔助，但不是最主要、最直接的治療。\u003c/li>\u003cli>Allopurinol 適用於 hyperuricosuria、痛風或反覆尿酸結石，但若尿液 pH 沒有矯正，效果有限。\u003c/li>\u003cli>Thiazide 主要用於 hypercalciuria / calcium stone，不是尿酸結石首選。\u003c/li>\u003c/ul>\u003cp>\u003cstrong>考點：\u003c/strong> uric acid stone 的核心問題常是 \u003cstrong>low urine pH\u003c/strong>，所以治療核心是 \u003cstrong>alkalinization\u003c/strong>。\u003c/p>"}, {"num": 37, "topic": "酸性尿與結石種類", "answer": "A", "stem": "哪種結石易在酸性尿中形成？", "options": {"A": "Uric acid stone", "B": "Calcium oxalate stone", "C": "Cystine stone", "D": "Carbonate apatite stone"}, "exp": "\u003cp>Uric acid stone 最典型在酸性尿中形成。尿液 pH 偏低時，uric acid 溶解度下降，容易沉澱成結石。\u003c/p>\u003cp>\u003cstrong>補充：\u003c/strong>\u003c/p>\u003cul>\u003cli>Cystine stone 也會受酸性尿影響，治療上也會用尿液鹼化；但考題若問「最典型酸性尿結石」，首選是 uric acid stone。\u003c/li>\u003cli>Carbonate apatite / calcium phosphate / struvite stone 多與鹼性尿相關。\u003c/li>\u003cli>Calcium oxalate stone 與尿液 pH 的關聯沒有 uric acid 那麼典型。\u003c/li>\u003c/ul>\u003cp>\u003cstrong>考點：\u003c/strong> \u003cstrong>acidic urine → uric acid stone\u003c/strong>；\u003cstrong>alkaline urine → struvite / calcium phosphate stone\u003c/strong>。\u003c/p>"}, {"num": 38, "topic": "Carbonate apatite / brushite stone", "answer": "C", "stem": "下列有關 carbonate apatite stones 及 brushite stones 之敘述，何者不正確？", "options": {"A": "副甲狀腺機能亢進（hyperparathyroidism）及腎小管性酸血症（renal tubular acidosis）均為兩者可能之病因", "B": "兩者均為 calcium phosphate stones", "C": "兩者均與泌尿道感染有關", "D": "在排除其他病因後，兩者之 hypercalciuria（>8 mmol/d）均可用 thiazide 來治療"}, "exp": "\u003cp>題目問「何者不正確」。Carbonate apatite 與 brushite 都屬於 calcium phosphate stone，但並不是兩者都與泌尿道感染有關。\u003c/p>\u003cp>\u003cstrong>重點整理：\u003c/strong>\u003c/p>\u003cul>\u003cli>Carbonate apatite 可與鹼性尿、感染性環境相關。\u003c/li>\u003cli>Brushite stone 常與 hypercalciuria、較高尿液 pH、distal renal tubular acidosis、hyperparathyroidism 等相關，較不典型歸類為感染性結石。\u003c/li>\u003cli>Hyperparathyroidism 與 distal RTA 都可造成 calcium phosphate stone 風險增加。\u003c/li>\u003cli>若排除其他原因，兩者若有 hypercalciuria，可考慮 thiazide 降低尿鈣。\u003c/li>\u003c/ul>\u003cp>\u003cstrong>考點：\u003c/strong> brushite 是 calcium phosphate stone，但不是典型 infection stone。\u003c/p>"}, {"num": 39, "topic": "泌尿道結石飲食預防", "answer": "B", "stem": "下列有關預防尿路結石的飲食建議何者為非？", "options": {"A": "目前隨機研究已經證實減少動物性蛋白質（肉）的攝入量有助於預防結石", "B": "大劑量的維生素 C 可以讓尿液 pH 略低，減少含鈣結石發生", "C": "飲食中限制鈣的攝取，實際上可能增加了結石復發的風險", "D": "建議每日飲水量 2.5 公升以上"}, "exp": "\u003cp>大量補充 vitamin C 不是預防結石的建議。Vitamin C 可代謝成 oxalate，過量攝取可能增加尿中 oxalate，反而增加 calcium oxalate stone 風險。\u003c/p>\u003cp>\u003cstrong>其他選項重點：\u003c/strong>\u003c/p>\u003cul>\u003cli>減少過量動物性蛋白有助於降低結石風險，因為動物蛋白會增加 acid load、尿鈣、尿酸，並降低 citrate。\u003c/li>\u003cli>避免過量高 oxalate 食物可降低 calcium oxalate stone 復發風險。\u003c/li>\u003cli>增加水分攝取是所有結石預防的核心，目標通常是足夠產生每日約 2–2.5 L 以上尿量。\u003c/li>\u003c/ul>\u003cp>\u003cstrong>考點：\u003c/strong> stone prevention 最重要是 \u003cstrong>high fluid intake\u003c/strong>；vitamin C 大量補充可能增加 oxalate，不建議作為預防策略。\u003c/p>"}, {"num": 40, "topic": "EAU prostate cancer risk group", "answer": "D", "stem": "根據《EAU Prostate Cancer Guidelines 2025》的臨床分期與風險分層分類，下列何者最正確？", "options": {"A": "T3 病灶已穿透前列腺包膜，若侵犯精囊則分期為 T3a；侵犯其他鄰近器官則為 T4", "B": "ISUP Grade Group 1 通常被視為臨床上無惡性之癌，年增進展率約為 1%。因此可不考慮進一步檢查", "C": "根據 EAU 分層標準，favourable intermediate risk 包括 cT2b–T2c、ISUP GG 2 且 PSA \u003c10 ng/mL", "D": "Locally advanced 指臨床分期為 cT3–T4 和 / 或 cN+，不論 PSA 或 ISUP 等級為何"}, "exp": "\u003cp>Locally advanced prostate cancer 可定義為 cT3–T4 或 cN+，不單純依 PSA 或 ISUP grade group 決定。\u003c/p>\u003cp>\u003cstrong>排除：\u003c/strong>\u003c/p>\u003cul>\u003cli>Seminal vesicle invasion 是 T3b，不是 T3a。\u003c/li>\u003cli>ISUP GG1 不等於完全不需要檢查或追蹤。\u003c/li>\u003cli>Favorable intermediate risk 需符合特定條件，不能把 cT2b–T2c、GG2、PSA &lt; 10 直接粗略套用。\u003c/li>\u003c/ul>"}, {"num": 41, "topic": "PSA 檢測誤差來源", "answer": "D", "stem": "根據《EAU Prostate Cancer Guidelines 2025》，以下哪一項最符合關於前列腺特異抗原（PSA）檢測潛在誤差來源的說明？", "options": {"A": "PSA 測值不受檢體處理條件影響；於 25°C 室溫下可穩定保存 72 小時以上", "B": "即使攝護腺體積增加，每毫升前列腺組織 PSA 產量一致，因此對總 PSA 解釋無意義", "C": "α-blocker 治療可顯著降低 PSA 濃度，長期使用者其 PSA 應上調約 50% 以校正潛在低估風險", "D": "急性尿滯留會造成血清 PSA 升高，且上升幅度可能超過 10 ng/mL"}, "exp": "\u003cp>急性尿滯留可造成 PSA 升高，良性攝護腺肥大也可能讓 PSA 超過 10 ng/mL。PSA 解讀時需考慮感染、尿滯留、近期操作、射精、藥物等因素。\u003c/p>\u003cp>\u003cstrong>常見陷阱：\u003c/strong>\u003c/p>\u003cul>\u003cli>5-alpha reductase inhibitor 可使 PSA 約下降 50%。\u003c/li>\u003cli>Alpha-blocker 不會造成 PSA 類似 5-ARI 的下降。\u003c/li>\u003c/ul>"}, {"num": 42, "topic": "mpMRI 在 prostate cancer 篩檢策略", "answer": "B", "stem": "根據《EAU Prostate Cancer Guidelines 2025》，下列何者最正確地描述多重影像（mpMRI）在族群性攝護腺癌篩檢策略中的角色？", "options": {"A": "mpMRI 不建議用於篩檢，因其敏感度過高導致過度診斷，且缺乏 RCT 佐證", "B": "在 MRI-FIRST、IP1-PROSTAGRAM 與 GÖTEBORG-2 等研究中，MRI 主導策略與傳統 PSA + 系統性切片相比，顯著增加 clinically significant PCa 檢出率，並減少 clinically insignificant PCa 的診斷", "C": "所有大型隨機對照研究均顯示 MRI 策略之 PSA 閾值應降至 \u003c1.5 ng/mL 以增加篩檢敏感度", "D": "GÖTEBORG-2 研究未納入前列腺切片分析，因此無法評估 MRI 在實際診斷層面的效能"}, "exp": "\u003cp>多項研究顯示，以 MRI 為基礎的策略可增加 clinically significant prostate cancer 的偵測，並減少 clinically insignificant prostate cancer 的過度診斷與不必要切片。\u003c/p>\u003cp>\u003cstrong>重點：\u003c/strong> mpMRI 不是單純「太敏感所以不建議」，而是可作為 risk-adapted pathway 的一環。\u003c/p>"}, {"num": 43, "topic": "M0 CRPC 治療策略", "answer": "C", "stem": "根據 NCCN Guidelines Version 2.2025，對於確診為非轉移性去勢抗性攝護腺癌（M0 CRPC）的病人，下列哪一項治療或處置策略最符合指南建議？", "options": {"A": "僅需持續 LHRH 療法與密切 PSA 追蹤，無需額外影像學檢查，除非 PSA 倍增時間（PSA-DT）少於 6 個月", "B": "所有 M0 CRPC 病人皆應進行全身性治療，包括 chemotherapy 與骨質護療法，即便無轉移病灶", "C": "若 PSA 倍增時間 ≤10 個月，建議使用 apalutamide、darolutamide 或 enzalutamide，並維持去勢治療", "D": "M0 CRPC 若經次世代影像如 PSMA PET 檢出微小轉移，仍應歸類為 M0，因指南對 PSMA PET 這類 next-generation imaging 尚採保守態度"}, "exp": "\u003cp>M0 CRPC 若 PSA doubling time ≤ 10 個月，屬於較高風險族群，建議在持續 ADT 的基礎上加入 apalutamide、darolutamide 或 enzalutamide。\u003c/p>\u003cp>\u003cstrong>重點：\u003c/strong>\u003c/p>\u003cul>\u003cli>CRPC 仍要維持 castration level testosterone，所以 ADT 要持續。\u003c/li>\u003cli>M0 CRPC 不代表所有病人都需 chemotherapy。\u003c/li>\u003cli>PSADT 是判斷是否加 AR pathway inhibitor 的重要因素。\u003c/li>\u003c/ul>"}, {"num": 44, "topic": "Prostate cancer bone health management", "answer": "C", "stem": "根據 NCCN Guidelines Version 2.2025，關於前列腺癌患者骨健康管理，下列敘述何者正確？", "options": {"A": "無骨轉移的 mCRPC 患者建議每 6 個月施打 zoledronic acid 以預防骨骼相關事件（SREs）", "B": "對 mHSPC 伴骨轉移者，zoledronic acid 之使用與腎功能無關，可依固定劑量常規給藥", "C": "開始骨修飾治療（如 zoledronic acid 或 denosumab）前，需安排牙科評估與必要矯治，建議至少延遲 7–21 天後再啟動藥物，以降低顎骨壞死（ONJ）風險", "D": "Denosumab 透過直接抑制 osteoblast 分化達到抗骨轉移效應，並與 zoledronic acid 作用機轉相同"}, "exp": "\u003cp>使用 bone-modifying agents，如 zoledronic acid 或 denosumab 前，應先做牙科評估、處理口腔感染或拔牙風險，並補充 calcium / vitamin D，以降低 osteonecrosis of the jaw, ONJ 風險。\u003c/p>\u003cp>\u003cstrong>排除：\u003c/strong>\u003c/p>\u003cul>\u003cli>無骨轉移不應常規用 q4–6 週 zoledronic acid 預防 SRE。\u003c/li>\u003cli>Denosumab 作用是抑制 RANKL，降低 osteoclast 活性，不是直接抑制 osteoblast。\u003c/li>\u003c/ul>"}, {"num": 45, "topic": "NCCN high / very-high risk prostate cancer 初始治療", "answer": "C", "stem": "根據 NCCN Guidelines Version 2.2025，針對局部或局部進展期高風險或極高風險（high- or very-high-risk）攝護腺癌病人，下列哪一項敘述最符合建議之初始治療策略或相關定義？", "options": {"A": "NCCN 定義術後 adverse features 包括病理 T3a 或以上、陽性切緣或 ISUP Grade Group ≥2", "B": "開放性或機械根除性前列腺切除術（RP）不再被推薦於極高風險族群，因手術後較放療差", "C": "根除性前列腺切除術可作為嚴格篩選病人之初始治療選項，應包含併發淋巴結清除術，並依術後病理風險因子（如 pT/N stage 或 surgical margin）考慮輔助治療", "D": "不建議根除性治療與 ADT 併用，因併用治療會延遲手術或放療時機而影響預後"}, "exp": "\u003cp>對 high-risk 或 very-high-risk prostate cancer，根除性攝護腺切除可作為嚴格篩選病人的治療選項，但病人需了解術後可能需要 multimodal therapy，例如 adjuvant 或 salvage radiation、ADT 等。\u003c/p>\u003cp>\u003cstrong>重點：\u003c/strong>\u003c/p>\u003cul>\u003cli>High-risk disease 不是 RP 禁忌。\u003c/li>\u003cli>Radiation + ADT 也是標準治療之一。\u003c/li>\u003cli>High-risk prostate cancer 的治療常需組合策略，而不是單一治療保證足夠。\u003c/li>\u003c/ul>"}, {"num": 46, "topic": "SHBG 上升原因", "answer": "C", "stem": "下列何種情形會造成 sex hormone-binding globulin（SHBG）的上升？", "options": {"A": "Nephrotic syndrome", "B": "Obesity", "C": "Hyperthyroidism", "D": "Diabetes Mellitus"}, "exp": "\u003cp>Hyperthyroidism 會使 SHBG 上升。相反地，obesity、diabetes mellitus、insulin resistance 常使 SHBG 下降。Nephrotic syndrome 會因尿中蛋白流失影響 binding proteins。\u003c/p>\u003cp>\u003cstrong>記法：\u003c/strong> 甲亢 → 肝臟合成 SHBG 增加 → total testosterone 可上升，但 free testosterone 不一定增加。\u003c/p>"}, {"num": 47, "topic": "CBAVD 相關表現", "answer": "D", "stem": "下列哪些症狀與病徵，與先天性雙側無輸精管無關？", "options": {"A": "精液酸鹼度小於 7", "B": "單次射精的量小於 1.5 ml", "C": "陰囊與診摸不到輸精管或部分副睪", "D": "伴隨 pulmonary fibrosis 的先天遺傳疾病"}, "exp": "\u003cp>CBAVD 與 CFTR mutation / cystic fibrosis 有關，但不是「pulmonary fibrosis」這類疾病。典型精液表現為低量、酸性、果糖低或缺乏，並可觸診不到輸精管。\u003c/p>\u003cp>\u003cstrong>考點：\u003c/strong> CBAVD = obstructive azoospermia + CFTR mutation，要評估伴侶 CFTR carrier status。\u003c/p>"}, {"num": 48, "topic": "Klinefelter syndrome", "answer": "B", "stem": "關於克林氏症候群（Klinefelter syndrome），下列敘述何者錯誤？", "options": {"A": "大多病患呈現無精子症、睪丸小、促性腺激素（gonadotropin）增加、睪固酮低下", "B": "雖然病患出現無精症，但可透過使用荷爾蒙製劑補充睪固酮，以促進精子生成", "C": "約有一半的機會可以從睪丸擷取到精子進行人工生殖", "D": "非鑲嵌型（nonmosaic 47,XXY）的比鑲嵌型（46,XY/47,XXY）的較為常見"}, "exp": "\u003cp>Klinefelter syndrome 常見小睪丸、高 FSH / LH、低 testosterone、NOA。雖然可透過 micro-TESE 找到精子並搭配 ICSI，但\u003cstrong>外源性 testosterone 補充會抑制下視丘-腦下垂體-睪丸軸，降低精子生成\u003c/strong>，不能說用 testosterone 補充來促進 spermatogenesis。\u003c/p>"}, {"num": 49, "topic": "AZF deletion 與取精可能性", "answer": "B", "stem": "依據文獻報告，以下哪一個狀況，不可能在精液或睪丸裡發現精子？", "options": {"A": "Klinefelter syndrome", "B": "Complete AZFa deletion", "C": "Complete AZFc deletions", "D": "Sertoli cell-only"}, "exp": "\u003cp>Complete AZFa deletion 幾乎不可能取到精子，通常不建議 micro-TESE。Complete AZFc deletion 則仍有機會取到精子；Klinefelter syndrome 與 Sertoli cell-only 也可能存在 focal spermatogenesis。\u003c/p>\u003cp>\u003cstrong>記法：\u003c/strong>\u003c/p>\u003cp>```text\u003c/p>\u003cp>AZFa complete deletion → sperm retrieval 幾乎 0\u003c/p>\u003cp>AZFb complete deletion → 極差\u003c/p>\u003cp>AZFc deletion → 有機會\u003c/p>\u003cp>```\u003c/p>"}, {"num": 50, "topic": "NOA + varicocele + low T 處置有灰區，但 A 作為標準流程最不適當", "answer": "A", "stem": "31 歲男性，無精子症患者，理學檢查發現睪丸大小：右側 9 ml、左側 8 ml，左側有 Grade III 精索靜脈曲張，賀爾蒙檢查：FSH 18.1 mIU/mL、LH 8.5 mIU/mL、Testosterone 2.12 ng/mL，染色體檢查：46,XY，無 Y 染色體微缺損，陰囊超音波檢查顯示左側精索靜脈曲張及兩側睪丸微鈣化（testicular microlithiasis），以下那一項處置最不適當？", "options": {"A": "先使用 Clomiphene citrate 或 HCG 治療 3–6 個月，若精液分析結果仍然無精子，再使用 FSH 治療 3–6 個月，若仍無精子，再做睪丸取精手術", "B": "左側精索靜脈曲張結紮手術", "C": "若患者沒有生育考量，可以使用睪固酮治療", "D": "睪丸取精手術"}, "exp": "\u003cp>病人小睪丸、FSH 高、azoospermia，較符合 non-obstructive azoospermia / primary testicular failure。A 選項的長期 sequential hormone manipulation：先 clomiphene 或 hCG 3–6 個月，無效再 FSH 3–6 個月，無效再 TESE，作為標準流程並不恰當，因此為最不適當。\u003c/p>\u003cp>\u003cstrong>其他選項：\u003c/strong>\u003c/p>\u003cul>\u003cli>左側 grade III varicocele：若有生育目標，可考慮 varicocelectomy；部分 NOA 病人術後可能出現精液中少量精子，或改善 TESE 機會。\u003c/li>\u003cli>無生育考量且 testosterone 低：可考慮 testosterone therapy。\u003c/li>\u003cli>有生育需求時：micro-TESE / TESE 是合理取精策略之一。\u003c/li>\u003c/ul>", "caveat": "⚠️ 答案疑義：NOA + varicocele + low T 處置有灰區，但 A 作為標準流程最不適當　→ 建議：生育需求避免外源性 T；考慮 varicocelectomy / micro-TESE"}], "quick": ["\u003cstrong>隱睪症：\u003c/strong> 6 個月後仍未下降 → 6–18 個月內 orchiopexy。", "\u003cstrong>Torsion：\u003c/strong> Doppler 有血流不能完全排除；高度懷疑就探查。", "\u003cstrong>UTUC：\u003c/strong> EV 單藥不是第一線 category 1；EV + pembrolizumab 才是重點。", "\u003cstrong>MIBC / mUC：\u003c/strong> platinum chemo 後可 avelumab maintenance；EV + pembrolizumab 是重要一線組合。", "\u003cstrong>Female BOO：\u003c/strong> 男性 BOOI \u003ccode>PdetQmax - 2Qmax > 40\u003c/code> 不適用女性。", "\u003cstrong>OABSS：\u003c/strong> frequency、nocturia、urgency、urgency incontinence；不含 QoL。", "\u003cstrong>ABOi transplant：\u003c/strong> 需降 anti-A/B antibody，常用 plasmapheresis / rituximab。", "\u003cstrong>2-glass prostatitis：\u003c/strong> IIIA = symptoms + culture negative + WBC positive。", "\u003cstrong>IMDC：\u003c/strong> low Hb、高 Ca、高 neutrophil、高 platelet、KPS \u003c80、診斷到治療 \u003c1 年。", "\u003cstrong>RCC adjuvant：\u003c/strong> ASSURE 陰性；KEYNOTE-564 是 positive trial。", "\u003cstrong>Struvite：\u003c/strong> urease-producing bacteria，最典型 Proteus；E. coli 較不相關。", "\u003cstrong>Uric acid stone：\u003c/strong> acidic urine；治療核心是 potassium citrate 鹼化尿液。", "\u003cstrong>Vitamin C：\u003c/strong> 大量補充會增加 oxalate，不是預防結石建議。", "\u003cstrong>M0 CRPC：\u003c/strong> PSADT ≤10 months → apalutamide / darolutamide / enzalutamide + 持續 ADT。", "\u003cstrong>Klinefelter：\u003c/strong> testosterone 補充不能促進造精；想生育要避免外源性 T。", "\u003cstrong>AZFa complete deletion：\u003c/strong> 幾乎取不到精子。"]}</script>
+</section>
 
 <script type="text/markdown" data-name="腎細胞癌 RCC" data-sub="本檔涵蓋 RCC 的 **overview（分類/影像/分期/病理）、localized（手術與 adjuvant pembrolizumab）、local advanced、metastatic（IMDC 風險分層、IO/TKI 系統治療">
 # 腎細胞癌（Renal Cell Carcinoma, RCC）　考試導向筆記
@@ -2745,6 +2964,88 @@ MSI-H/dMMR(+) → pembrolizumab
 
 ---
 
+### Ch.19 mCRPC 治療選項與排序（Metastatic Castration-Resistant PCa）★ 必考
+
+> 📌 補充章節：原講義（宋文瑋醫師）註明「mCRPC 完整排序非本講義主軸」，但 mCRPC 各藥物類別、關鍵試驗與排序為泌專必考，依 EAU / NCCN / AUA guideline 與 landmark trials 補入。
+
+**A. 一句話重點**
+**CRPC＝在睪固酮已達去勢濃度（<50，理想 <20 ng/dL）下仍進展（PSA 升高和／或影像惡化）；ADT 須持續當骨幹**，mCRPC 在其上加：ARPI（abiraterone／enzalutamide）、taxane（docetaxel→cabazitaxel）、PARPi（BRCA/HRR）、放射配體（¹⁷⁷Lu-PSMA）、Radium-223（症狀骨轉移、無內臟）、免疫（sipuleucel-T；MSI-H/dMMR 用 pembrolizumab）。
+
+**B. 必背定義與數字**
+- **CRPC 定義**：去勢濃度（testosterone <50 ng/dL，理想 <20）下，**連續 3 次 PSA 上升、間隔 ≥1 週、較最低點上升 >50% 且 >2 ng/mL**，或出現影像進展（≥2 處新骨病灶 / RECIST 軟組織進展）。**ADT 永不停**。
+- **ARPI（雄性素受體路徑抑制劑）**：
+  - **Abiraterone**（CYP17 抑制劑，須配 **prednisone**）：COU-AA-301（post-docetaxel）、**COU-AA-302（化療前）**。副作用＝**礦皮質醇過多（高血壓、低血鉀、水腫）、肝毒性**。
+  - **Enzalutamide**（AR 拮抗）：**AFFIRM（post-docetaxel）、PREVAIL（化療前）**。副作用＝疲倦、**癲癇風險**、跌倒、高血壓。
+- **Taxane 化療**：
+  - **Docetaxel**：**TAX327**——mCRPC **第一個證實延長 OS** 的化療。
+  - **Cabazitaxel**：**TROPIC（post-docetaxel）**；**CARD**——docetaxel＋一線 ARPI 後，**cabazitaxel 優於換第二個 ARPI**。
+- **PARP 抑制劑（BRCA/HRR 突變）**：
+  - **Olaparib**：**PROfound**（HRR/BRCA，ARPI 後）。
+  - **Rucaparib**：TRITON（BRCA）。
+  - 合併：olaparib＋abiraterone（PROpel）、niraparib＋abi（MAGNITUDE，HRR+）、talazoparib＋enza（TALAPRO-2）。
+- **放射配體 ¹⁷⁷Lu-PSMA-617**：**VISION trial**——**PSMA-PET 陽性**、ARPI 與 taxane 後，延長 OS／rPFS。
+- **Radium-223**（α 射子）：**ALSYMPCA**——**症狀性骨轉移且「無內臟轉移」**，延長 OS、減少骨骼相關事件（SRE）。**勿與 abiraterone＋prednisone 併用（ERA-223：骨折／死亡↑）**。
+- **免疫治療**：
+  - **Sipuleucel-T**（自體細胞疫苗）：**IMPACT**——**無症狀／輕症 mCRPC**，延長 OS（美國）。
+  - **Pembrolizumab**：**MSI-H/dMMR 或 TMB-high（tumor-agnostic）**。
+- **骨保護**：mCRPC 骨轉移用 **denosumab 或 zoledronic acid** 減少 SRE；注意**顎骨壞死、低血鈣**（需補鈣／維生素 D）。
+
+**C. 臨床判斷流程**
+```
+確認 CRPC：testosterone <50(理想<20) 仍 PSA/影像進展 → ADT 持續
+  → 先做基因檢測(HRR/BRCA、MSI-H/dMMR) + PSMA-PET
+  ├ BRCA/HRR(+) → PARPi(±ARPI)
+  ├ MSI-H/dMMR / TMB-high → pembrolizumab
+  ├ PSMA(+)、ARPI+taxane 後 → ¹⁷⁷Lu-PSMA-617
+  ├ 症狀骨轉移、無內臟 → Radium-223(勿配 abi+pred)
+  ├ 無症狀/輕症 → 可考慮 sipuleucel-T
+  └ 一般序列：ARPI 或 docetaxel → (docetaxel 後)cabazitaxel
+※ 避免 ARPI→ARPI 連用(交叉抗藥；CARD：改用 cabazitaxel 較佳)
+```
+
+**D. 診斷工具與適應症**
+- **基因檢測**：HRR panel（BRCA1/2、ATM、PALB2…）、MSI-H/dMMR（mCRPC 必做）引導 PARPi／pembrolizumab。
+- **PSMA-PET/CT**：篩選 ¹⁷⁷Lu-PSMA-617 適應者（須 PSMA 陽性）。
+- 影像（CT/bone scan）與 PSA 追蹤判定進展。
+
+**E. 治療策略（依情境）**
+- **先前 mHSPC 已用 ARPI±docetaxel** → mCRPC 換不同機轉：化療(docetaxel/cabazitaxel)、PARPi、Lu-PSMA、Radium-223。
+- **化療不適合／拒絕** → ARPI（若未用過）、依基因標靶或放射配體。
+- **症狀性骨轉移**：Radium-223＋骨保護劑；考慮緩和放療。
+- 全程持續 ADT、骨保護、症狀緩和與 QoL 照護。
+
+**F. 考試高頻重點**
+1. **CRPC＝去勢濃度下仍進展；ADT 不可停**。
+2. **Docetaxel（TAX327）＝mCRPC 第一個延長 OS 的化療**。
+3. **CARD：docetaxel＋一個 ARPI 後，cabazitaxel 優於第二個 ARPI**（勿 ARPI→ARPI）。
+4. **Radium-223＝症狀骨轉移、無內臟；勿與 abiraterone＋prednisone 併用（ERA-223）**。
+5. **¹⁷⁷Lu-PSMA-617（VISION）需 PSMA-PET 陽性**。
+6. **PARPi→BRCA/HRR；pembrolizumab→MSI-H/dMMR**。
+7. **Sipuleucel-T＝無症狀／輕症**。
+8. **Abiraterone 配 prednisone（礦皮質醇副作用）；enzalutamide 注意癲癇**。
+
+**G. 容易混淆比較表**
+
+| 藥物 | 機轉 | 關鍵試驗 | 適應／限制 |
+|---|---|---|---|
+| Abiraterone | CYP17 抑制 | COU-AA-301/302 | 須配 prednisone；高血壓/低血鉀/肝毒 |
+| Enzalutamide | AR 拮抗 | AFFIRM/PREVAIL | 癲癇、疲倦、跌倒 |
+| Docetaxel | 微管穩定 | TAX327 | 第一個 OS 化療 |
+| Cabazitaxel | 微管（post-doce） | TROPIC/CARD | docetaxel 後優於第二 ARPI |
+| Olaparib | PARP 抑制 | PROfound | BRCA/HRR(+) |
+| ¹⁷⁷Lu-PSMA-617 | 放射配體 | VISION | 需 PSMA-PET(+)、ARPI+taxane 後 |
+| Radium-223 | α 骨親和 | ALSYMPCA | 症狀骨轉移、**無內臟**；勿配 abi+pred |
+| Sipuleucel-T | 細胞疫苗 | IMPACT | 無症狀/輕症 |
+| Pembrolizumab | PD-1 | — | MSI-H/dMMR、TMB-high |
+
+**H. 臨床記憶法**
+- **「ADT 不停，去勢還進展＝CRPC」**。
+- 排序口訣：**「先驗基因＋PSMA → 標靶(PARP/pembro)、放射(Lu/Ra)、化療(doce→caba)」**。
+- **CARD 教訓：別 ARPI 接 ARPI**。
+- **Radium「骨可以、內臟不行；不配 abi」**；**Lu-PSMA「先看 PSMA 亮不亮」**；**sipuleucel「沒症狀才打」**。
+
+---
+
 ## 🎓 Section 3：總整理與考前衝刺
 
 ### 📋 一頁式總複習表
@@ -2774,6 +3075,7 @@ MSI-H/dMMR(+) → pembrolizumab
 | PSM | 腫瘤接觸 inked surface；BCR 獨立因子；與 EPE 獨立；focal≤1mm |
 | ADT | castration 最佳<20；agonist 有 flare(加 bicalutamide)、antagonist 無；relugolix MACE↓54% |
 | 系統治療 | docetaxel(OS)、cabazitaxel(post-doce)；PARPi(BRCA/HRR)、pembro(MSI-H/dMMR) |
+| mCRPC 排序 | ADT 持續；CARD 別 ARPI→ARPI；Radium-223 限症狀骨轉移無內臟(勿配 abi)；Lu-PSMA 需 PSMA(+)；sipuleucel 無症狀 |
 
 ---
 
@@ -2947,6 +3249,7 @@ MSI-H/dMMR(+) → pembrolizumab
 18. **ProtecT 15 年**：三組 CSS 皆 >96%；**AM（純 PSA）轉移 9.4% 最高**；SPCG-4(pre-PSA)RP 優、PIVOT(PSA)OS 無差異。
 19. **AS 納入**：**GG1、PSA<10、PSA-D<0.15、≤cT2a**；favourable intermediate(low-vol GG2、cores≤2)可 AS；≥GG3/cribriform 停 AS。
 20. **ADT/系統**：castration 理想 <20 ng/dL；**agonist 有 flare(加 bicalutamide)、antagonist 無**、relugolix MACE↓54%；docetaxel(OS)、cabazitaxel(post-doce)；**PARPi→BRCA/HRR、pembro→MSI-H/dMMR**；**PSM 為 BCR 獨立因子、與 EPE 獨立**。
+21. **mCRPC 排序**：ADT 持續為骨幹；**docetaxel（TAX327）首個 OS 化療**；**CARD：docetaxel＋ARPI 後改 cabazitaxel（勿 ARPI→ARPI）**；**Radium-223 限症狀骨轉移、無內臟、勿配 abiraterone＋prednisone**；**¹⁷⁷Lu-PSMA-617（VISION）需 PSMA-PET 陽性**；sipuleucel-T 用於無症狀／輕症。
 
 ---
 
@@ -7819,7 +8122,9 @@ bd.onclick=closeSide;
 /* ============ 分頁切換 ============ */
 function showPage(id){
   document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id==='page-'+id));
-  document.querySelectorAll('.ptab').forEach(t=>t.classList.toggle('active',t.dataset.page===id));
+  // 核心課程分頁在 hub / 上課講義 / 114年考題 三個子頁都維持高亮
+  const tabFor=(id==='cover')?'cover':'corehub';
+  document.querySelectorAll('.ptab').forEach(t=>t.classList.toggle('active',t.dataset.page===tabFor));
   if(typeof closeSide==='function')closeSide();
   window.scrollTo(0,0);
 }
@@ -7830,6 +8135,79 @@ document.querySelectorAll('.ptab').forEach(t=>{
 document.querySelectorAll('.cover-card[data-goto]').forEach(c=>{
   c.addEventListener('click',()=>showPage(c.dataset.goto));
 });
+
+/* ============ 考題練習 114 ============ */
+(function(){
+  const dataEl=document.getElementById('quiz114-data');
+  if(!dataEl) return;
+  let QUIZ; try{QUIZ=JSON.parse(dataEl.textContent);}catch(e){console.error('quiz parse',e);return;}
+  const listEl=document.getElementById('quizList');
+  const scoreEl=document.getElementById('scorechip');
+  const quickEl=document.getElementById('quickReview');
+  let mode='test';
+  const state=QUIZ.questions.map(()=>({chosen:null,revealed:false}));
+  function qesc(t){return (t||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  function optHtml(q,i,letter){
+    const st=state[i]; let cls='qopt';
+    if(mode==='test'){
+      if(st.chosen||st.revealed){
+        if(letter===q.answer) cls+=' correct';
+        if(st.chosen===letter && letter!==q.answer) cls+=' wrong';
+      }
+    }else{ if(st.revealed && letter===q.answer) cls+=' correct'; }
+    const dis=(mode==='test' && (st.chosen||st.revealed))?' disabled':'';
+    return '<button class="'+cls+'" data-i="'+i+'" data-letter="'+letter+'"'+dis+'>'
+      +'<span class="ol">'+letter+'</span><span class="ot">'+qesc(q.options[letter]||'')+'</span></button>';
+  }
+  function cardHtml(q,i){
+    const st=state[i]; const letters=Object.keys(q.options).sort();
+    let h='<div class="qcard" id="qcard-'+i+'">';
+    h+='<div class="qhead"><span class="qnum">Q'+q.num+'</span><span class="qtopic">'+qesc(q.topic)+'</span></div>';
+    if(q.caveat) h+='<div class="qcaveat">'+qesc(q.caveat)+'</div>';
+    h+='<div class="qstem">'+qesc(q.stem)+'</div>';
+    h+='<div class="qopts">'+letters.map(l=>optHtml(q,i,l)).join('')+'</div>';
+    const revealed=(mode==='test' && (st.chosen||st.revealed))||(mode==='flip' && st.revealed);
+    if(mode==='flip' && !st.revealed){ h+='<button class="qreveal" data-i="'+i+'">顯示答案／詳解</button>'; }
+    if(revealed){
+      let verdict='';
+      if(mode==='test' && st.chosen){
+        verdict = st.chosen===q.answer ? '<span class="vok">✓ 答對</span>'
+                : '<span class="vno">✗ 答錯（你選 '+st.chosen+'）</span>';
+      }
+      h+='<div class="qexp"><div class="qans">正確答案：<b>'+q.answer+'</b> '+verdict+'</div>'
+        +'<div class="qexpbody">'+(q.exp||'')+'</div></div>';
+    }
+    h+='</div>'; return h;
+  }
+  function updateCard(i){ const el=document.getElementById('qcard-'+i); if(el) el.outerHTML=cardHtml(QUIZ.questions[i],i); }
+  function updateScore(){
+    let correct=0,answered=0;
+    QUIZ.questions.forEach((q,i)=>{ if(state[i].chosen){answered++; if(state[i].chosen===q.answer)correct++;}});
+    const total=QUIZ.questions.length; const pct=answered?Math.round(correct/answered*100):0;
+    scoreEl.innerHTML = mode==='test'
+      ? '答對 <b>'+correct+'</b> ／ 已作答 <b>'+answered+'</b> ／ 共 '+total+'　正確率 <b>'+pct+'%</b>'
+      : '翻牌複習模式 ／ 共 '+total+' 題';
+  }
+  function renderAll(){ listEl.innerHTML=QUIZ.questions.map((q,i)=>cardHtml(q,i)).join(''); updateScore(); }
+  listEl.addEventListener('click',function(e){
+    const opt=e.target.closest('.qopt'); const rev=e.target.closest('.qreveal');
+    if(opt && mode==='test'){ const i=+opt.dataset.i; if(state[i].chosen) return;
+      state[i].chosen=opt.dataset.letter; state[i].revealed=true; updateCard(i); updateScore();
+    }else if(rev){ const i=+rev.dataset.i; state[i].revealed=true; updateCard(i); }
+  });
+  document.querySelectorAll('.qmode').forEach(b=>b.addEventListener('click',function(){
+    document.querySelectorAll('.qmode').forEach(x=>x.classList.toggle('active',x===b));
+    mode=b.dataset.mode; renderAll();
+  }));
+  document.getElementById('resetQuizBtn').addEventListener('click',function(){
+    state.forEach(s=>{s.chosen=null;s.revealed=false;}); renderAll(); window.scrollTo(0,0);
+  });
+  document.getElementById('revealAllBtn').addEventListener('click',function(){
+    state.forEach(s=>{s.revealed=true;}); renderAll();
+  });
+  quickEl.innerHTML='<h2>📌 快速複習版重點</h2><ul>'+QUIZ.quick.map(x=>'<li>'+x+'</li>').join('')+'</ul>';
+  renderAll();
+})();
 
 /* ============ 啟動 ============ */
 buildSidebar();
